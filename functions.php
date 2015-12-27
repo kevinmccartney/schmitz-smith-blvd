@@ -112,4 +112,11 @@ if (!function_exists( 'schmitz_smith_widgets_init' ) ) {
     }
     add_action('widgets_init', 'schmitz_smith_widgets_init', 11);
 }
-?>
+
+
+if (!function_exists( 'schmitz_smith_font_loader' ) ) {
+    function schmitz_smith_font_loader() {
+        wp_enqueue_style( 'schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css');
+    }
+    add_action('wp_enqueue_scripts', 'schmitz_smith_font_loader', 11);
+}

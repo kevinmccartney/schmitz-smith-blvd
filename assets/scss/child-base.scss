@@ -8,14 +8,6 @@
 /* Import Parent Theme Base */
 @import "../../../hji-boulevard/assets/scss/base";
 
-
-/* Font Imports */
-
-@font-face {
-    font-family: Caviar Dreams;
-    src: url(../fonts/CaviarDreams.ttf);
-}
-
 @import "partials/additional-variables";
 @import "partials/child-globals";
 @import "partials/footer";
