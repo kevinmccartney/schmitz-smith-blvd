@@ -1,0 +1,64 @@
+/* ==========================================================================
+  Global
+  ========================================================================== */
+.hjitb .selectize-input,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+.btn {
+    @include box-shadow( $boxshadow );
+}
+
+// tab links
+.nav-tabs >  {
+    li > a {
+        margin-right: .75em;
+        border-color: $nav-tabs-border-color;
+        border-top: 3px solid $nav-tabs-border-color;
+
+        &:hover {
+            border-color: $nav-tabs-border-color;
+            border-top-color: change-color( $brand-primary, $brand-primary );
+        }
+    }
+
+    // makes the active link have top highlight
+    li.active > a,
+    li.active > a:hover,
+    li.active > a:focus {
+        border-top: 3px solid $brand-primary;
+    }
+
+}
+
+// tab content
+.tab-content {
+    background-color: $body-background-color;
+    border: 1px solid $nav-tabs-border-color;
+    border-top-color: transparent;
+}
+
+.black-text {
+    color: #000;
+}
+
+a,
+.btn {
+    @include transition( all 0.35s ease-in-out );
+}
+
+.entry-content {
+    a {
+        text-decoration: underline;
+    }
+}
+
+label {
+    margin-right:5px
+}
+
+
+.banner {
+    border: none;
+}

@@ -1,0 +1,60 @@
+// rIDX styles
+
+// Single Listing View
+.ridx-single {
+
+    // fixes button shadows
+    .tools-panel {
+
+        .btn {
+            @include box-shadow(none);
+        }
+
+        @media (min-width: $screen-md) {
+            @include box-shadow( $boxshadow );
+        }
+    }
+
+    .idx-secondary-item {
+        padding: 0 .33em;
+
+        &:nth-child(odd) {
+            background-color: change-color( $body-background-color, $body-background-color, 4% );
+        }
+    }
+
+    .photo-wrap {
+        position: relative;
+
+        .vt-wrap {
+            position: absolute;
+            top: 1em;
+            left: 1em;
+            background-color: rgba($brand-second, .8);
+
+            padding: .5em 1em;
+            border-radius: $border-radius-base;
+
+            a {
+                color: set-text-color-from-background( rgba($brand-second, .8) );
+                &:hover {
+                    color: $brand-primary;
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                background-color: $brand-second;
+            }
+        }
+    }
+
+    .slider-wrapper {
+        margin-top: .75em;
+
+        &:before {
+            content: "Additional Photos";
+            font-size: 2rem;
+        }
+    }
+}

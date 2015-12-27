@@ -1,0 +1,21 @@
+#sidebar {
+    padding:20px 0 30px 20px;
+    border-left: 1px solid change-color( $blockquote-border-color, $body-background-color );
+    font-size:0.9em;
+    line-height: 1.8em;
+    font-weight: 300;
+    letter-spacing: .4em;
+
+    h3 {
+        font-size:2em;
+    }
+    h4 {
+        font-weight:400;
+        margin:0;
+        font-size:1em;
+    }
+
+    .widget-container {
+        padding-bottom:30px;
+    }
+}

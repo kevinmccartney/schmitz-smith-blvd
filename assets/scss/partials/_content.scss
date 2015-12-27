@@ -1,0 +1,31 @@
+h1.page-title {
+    letter-spacing: .05em;
+    font-weight:100;
+}
+
+.entry-content {
+
+    .read-more-link {
+        margin: 15px 0 0 0;
+
+        a {
+            text-decoration: none;
+            font-size: 1em;
+        }
+    }
+}
+
+
+h2.entry-title {
+    font-weight:100;
+}
+
+
+article.post {
+    border-top:solid 1px change-color( $body-background-color, $body-background-color );
+    padding-top:20px;
+
+    &:first-child {
+        border-top:none;
+    }
+}

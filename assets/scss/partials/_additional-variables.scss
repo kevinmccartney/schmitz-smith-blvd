@@ -1,0 +1,17 @@
+/* ==========================================================================
+  Variables
+  ========================================================================== */
+$brand-primary-light: lighten( $brand-primary, 20% ) !default;
+$brand-primary-dark: darken( $brand-primary, 20% ) !default;
+
+$brand-second-light: lighten( $brand-second, 20% ) !default;
+$brand-second-dark: darken( $brand-second, 20% ) !default;
+
+$brand-third-light: lighten( $brand-third, 20% ) !default;
+$brand-third-dark: darken( $brand-third, 20% ) !default;
+
+$transparentblackbox: rgba(0, 0, 0, 0.4);
+
+$home-widget-parallax: none !default;
+
+$boxshadow: 3px 3px 4px 0 rgba(0,0,0,.25);

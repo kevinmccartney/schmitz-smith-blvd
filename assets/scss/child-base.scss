@@ -1,0 +1,28 @@
+/**
+ * Child-Base.scss
+ * This file loads all the styles we need for our theme.
+ *
+ * There should be no styles in this file, only @imports
+ */
+
+/* Import Parent Theme Base */
+@import "../../../hji-boulevard/assets/scss/base";
+
+
+/* Font Imports */
+
+@font-face {
+    font-family: Caviar Dreams;
+    src: url(../fonts/CaviarDreams.ttf);
+}
+
+@import "partials/additional-variables";
+@import "partials/child-globals";
+@import "partials/footer";
+@import "partials/content";
+@import "partials/sidebar";
+@import "partials/widgets";
+@import "partials/homepage";
+@import "partials/bx-slider";
+@import "partials/rIDX";
+@import "partials/media-queries";

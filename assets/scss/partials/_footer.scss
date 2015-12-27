@@ -1,0 +1,118 @@
+footer .textwidget {
+    text-align:left;
+
+    img {
+        float:left;
+        width:75%;
+        display:block;
+        margin:40px 25% 40px 0
+    }
+
+    p {
+        color: #7c7e83;
+        font-weight:100;
+        font-size:0.825em;
+        display:block;
+    }
+}
+
+footer .widget-title {
+    text-align:left;
+    margin:40px 0 20px 0;
+
+    h3 {
+        font-weight:100;
+        color:#dcdee2;
+        text-transform:uppercase;
+        font-size:1.4em
+    }
+}
+
+footer #copyright {
+    color:#7c7e83;
+    border-top: solid 1px #2b303b;
+    margin: 20px auto 0 auto;
+    text-align:left;
+    padding:20px 0;
+    font-size:1em;
+    font-weight:100;
+
+    span {
+        font-size:0.8em
+    }
+
+    a {
+        color:#00aed9;
+        text-decoration:none
+    }
+}
+
+#idx-footer-compliance {
+    color:#7c7e83;
+    font-weight:100;
+    text-align:left;
+    margin-top:-10px
+}
+
+.widget_pages ul {
+    margin:0;
+    padding:0;
+
+    li:before {
+        content: "\003e \0020";
+        padding-right:5px
+    }
+
+    li {
+        font-size:0.9em;
+        margin:0;
+        padding:0;
+        text-align:left;
+        display:block;
+        color:#7c7e83;
+        line-height:2.2em;
+
+        a {
+            font-size:0.95em;
+            font-weight:100;
+            color:#7c7e83
+        }
+
+        a:hover {
+            color:#00aed9;
+            text-decoration:none
+        }
+    }
+}
+
+ul.footercontactlist {
+    margin:0;
+    padding:0;
+
+    li {
+        font-size:0.8em;
+        font-weight:100;
+        margin:25px 0;
+        padding:0 0 0 30px;
+        text-align:left;
+        display:block;
+        color:#7c7e83;
+        line-height:2.2em;
+    }
+
+    li:before {
+        content:none;
+    }
+
+    li.address {
+        background:url('/wp-content/uploads/2014/09/pin13.png') center left no-repeat;
+    }
+
+    li.phone {
+        background:url('/wp-content/uploads/2014/09/mobile177.png') center left no-repeat;
+    }
+
+    li.email {
+        background:url('/wp-content/uploads/2014/09/send4.png') center left no-repeat;
+    }
+}
