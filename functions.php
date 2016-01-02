@@ -16,8 +16,8 @@ if ( !defined( 'HJI_BLVD_SCSS' ) ) {
 /**
  * Registering Additional Widgets & de-registering a few we don't need
 */
-if (!function_exists( 'schmitz_smith_widgets_init' ) ) {
-    function schmitz_smith_widgets_init() {
+if (!function_exists( 'hji_schmitz_smith_widgets_init' ) ) {
+    function hji_schmitz_smith_widgets_init() {
         register_sidebar( array(
             'id'            => 'buying-sidebar',
             'name'          => __( 'Buying Sidebar Widgets', 'hji_themework' ),
@@ -110,13 +110,20 @@ if (!function_exists( 'schmitz_smith_widgets_init' ) ) {
         unregister_sidebar( 'idx-horizontal-search');
         unregister_sidebar( 'blvd-main-sidebarwidgets');
     }
-    add_action('widgets_init', 'schmitz_smith_widgets_init', 11);
+    add_action('widgets_init', 'hji_schmitz_smith_widgets_init', 11);
 }
 
 
-if (!function_exists( 'schmitz_smith_font_loader' ) ) {
-    function schmitz_smith_font_loader() {
-        wp_enqueue_style( 'schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css');
+if (!function_exists( 'hji_schmitz_smith_font_loader' ) ) {
+    function hji_schmitz_smith_font_loader() {
+        wp_enqueue_style( 'hji_schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css');
     }
-    add_action('wp_enqueue_scripts', 'schmitz_smith_font_loader', 11);
+    add_action('wp_enqueue_scripts', 'hji_schmitz_smith_font_loader');
+}
+
+if (!function_exists('hji_schmitz_smith_enqueue_scripts')) {
+    function hji_schmitz_smith_enqueue_scripts() {
+        wp_enqueue_script( 'hji_schmitz_smith_scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), null, true );
+    }
+    add_action('wp_enqueue_scripts', 'hji_schmitz_smith_enqueue_scripts');
 }
