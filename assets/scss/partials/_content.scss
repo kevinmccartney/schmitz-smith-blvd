@@ -1,31 +1,95 @@
 h1.page-title {
     letter-spacing: .05em;
-    font-weight:100;
 }
 
-.entry-content {
+.entry-content .read-more-link {
+  margin: 1rem 0;
 
-    .read-more-link {
-        margin: 15px 0 0 0;
-
-        a {
-            text-decoration: none;
-            font-size: 1em;
-        }
-    }
+  a {
+      text-decoration: none;
+  }
 }
-
-
-h2.entry-title {
-    font-weight:100;
-}
-
-
 article.post {
-    border-top:solid 1px change-color( $body-background-color, $body-background-color );
-    padding-top:20px;
+    border-top: rgba($brand-second, 0.75);
+    padding-top: 2.5rem;
 
     &:first-child {
         border-top:none;
+    }
+}
+
+// a helper class that works in conjunction with the responsive bootstrap
+// class as a wrapper
+.youtube-video-wrapper {
+  @media(min-width: 992px) {
+    width: 65%;
+    margin: auto;
+  }
+}
+
+// adds a 2rem margin to all content sections not on the homepage
+body:not(.home) #content {
+    margin: 2rem 0px;
+    padding: 2rem;
+    background-color: $white;
+    box-shadow: $black 1px 2px 20px;
+}
+
+h3.relo, 
+.relo-links-wrapper {
+    text-align: center;
+}
+
+.btn-relo {
+    width: calc(50% - 2rem);
+    margin: 0 1rem;
+}
+
+/* 
+ * BEGIN $pdf-download-button 
+ * these styles govern the button on the $page
+ */
+
+// the container
+.pdf-download-container {
+  width: 100%;
+  margin: 3rem 0rem;
+  text-align: center;
+}
+
+// the text
+a.pdf-download-button {
+  font-variant: small-caps;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  transition: ease 0.5s;
+  &:hover,
+  &:focus.
+  &:active {
+    padding: 2.5rem;    
+  }
+}
+
+// hides the alphabet search under the main search bar on the 
+// agent roster archive page
+ul#agent-index {
+    display: none;
+}
+
+.custom-video-grid-area-title {
+    font-weight: bolder;
+    font-size: 4.5rem;
+    background-color: $brand-primary-light-20;
+    padding: 1rem 4rem;
+}
+
+.custom-video-grid-item {
+    text-align: center;
+}
+
+.custom-homepage-cta-pods {
+    text-align: center;
+    @media(max-width: $screen-md) {
+        margin: 1rem auto;
     }
 }

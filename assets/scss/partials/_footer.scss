@@ -1,118 +1,76 @@
-footer .textwidget {
-    text-align:left;
-
-    img {
-        float:left;
-        width:75%;
-        display:block;
-        margin:40px 25% 40px 0
-    }
-
-    p {
-        color: #7c7e83;
-        font-weight:100;
-        font-size:0.825em;
-        display:block;
-    }
-}
-
 footer .widget-title {
-    text-align:left;
-    margin:40px 0 20px 0;
-
-    h3 {
-        font-weight:100;
-        color:#dcdee2;
-        text-transform:uppercase;
-        font-size:1.4em
-    }
+    margin: 4rem 0 2rem 0;
 }
 
 footer #copyright {
-    color:#7c7e83;
-    border-top: solid 1px #2b303b;
     margin: 20px auto 0 auto;
-    text-align:left;
     padding:20px 0;
-    font-size:1em;
-    font-weight:100;
-
-    span {
-        font-size:0.8em
-    }
-
     a {
-        color:#00aed9;
-        text-decoration:none
+        // color:#00aed9;
+        color: $brand-primary-light-20;
     }
 }
 
-#idx-footer-compliance {
-    color:#7c7e83;
-    font-weight:100;
-    text-align:left;
-    margin-top:-10px
+// establishes footer-global background, word-break & 
+// aligns all text to the center on $screen-xs
+#footer {
+  .container {
+    width: 95vw;
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+  }
 }
 
-.widget_pages ul {
-    margin:0;
-    padding:0;
-
-    li:before {
-        content: "\003e \0020";
-        padding-right:5px
-    }
-
-    li {
-        font-size:0.9em;
-        margin:0;
-        padding:0;
-        text-align:left;
-        display:block;
-        color:#7c7e83;
-        line-height:2.2em;
-
-        a {
-            font-size:0.95em;
-            font-weight:100;
-            color:#7c7e83
-        }
-
-        a:hover {
-            color:#00aed9;
-            text-decoration:none
-        }
-    }
+// text color resets
+#footer #copyright .container, 
+#footer .idx-compliance {
+  color: #fff;
 }
 
-ul.footercontactlist {
-    margin:0;
-    padding:0;
+// resets some blvd-native & custom inherited styles on footer widget titles
+footer .widget-title h3 {
+  text-transform: none;
+  color: $white;
+  font-size: 1.5em;
+  border-bottom: $brand-second solid 1px;
+  padding-bottom: 1rem;
+  @media(max-width: $screen-xs) {
+    text-align: center;
+  }
+}
 
-    li {
-        font-size:0.8em;
-        font-weight:100;
-        margin:25px 0;
-        padding:0 0 0 30px;
-        text-align:left;
-        display:block;
-        color:#7c7e83;
-        line-height:2.2em;
+// resets some blvd-native styles on footer paragraphs
+div#footer-custom-contact-wrapper {
+  font-size: 16px;
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+  a {
+    color: $brand-primary-light-20 !important;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $brand-primary-dark-20 !important;
     }
+  }
+}
 
-    li:before {
-        content:none;
-    }
+//styles for the footer logo wrapper
+.footer-logo-wrapper {
+  text-align: center;
+}
 
-    li.address {
-        background:url('/wp-content/uploads/2014/09/pin13.png') center left no-repeat;
-    }
+// styles for the footer log0
+img#footer-logo {
+  margin: auto;
+  width: 75%;
+  @media(min-width: $screen-md) {
+    width: 50%;
+  }
+}
 
-    li.phone {
-        background:url('/wp-content/uploads/2014/09/mobile177.png') center left no-repeat;
-    }
-
-    li.email {
-        background:url('/wp-content/uploads/2014/09/send4.png') center left no-repeat;
-    }
+// removes the border above the copyright section in the footer
+footer #copyright {
+    border-top: 0px;
 }

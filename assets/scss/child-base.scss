@@ -8,15 +8,15 @@
 /* Import Parent Theme Base */
 @import "../../../hji-boulevard/assets/scss/base";
 
+
+/* Import Child Vars */
 @import "child-variables";
 
-@import "partials/bx-slider";
+/* Import Child Styles */
 @import "partials/child-globals";
 @import "partials/content";
 @import "partials/footer";
+@import "partials/header";
 @import "partials/homepage";
-@import "partials/main";
-@import "partials/media-queries";
 @import "partials/rIDX";
 @import "partials/sidebar";
-@import "partials/widgets";

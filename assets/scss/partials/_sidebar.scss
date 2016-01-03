@@ -1,21 +1,71 @@
-#sidebar {
-    padding:20px 0 30px 20px;
-    border-left: 1px solid change-color( $blockquote-border-color, $body-background-color );
-    font-size:0.9em;
-    line-height: 1.8em;
-    font-weight: 300;
-    letter-spacing: .4em;
+// makes the rIDX quick search fields in the sidebar 100% width
+.custom-sidebar-wrapper .hji-fieldwrap input[type="text"] {
+  width: 100% !important;
+}
 
+
+.custom-sidebar-wrapper {
+  text-align: right;
+  .widget-title {
+    margin: 0;
     h3 {
-        font-size:2em;
+      font-size: 2rem;
+      margin: 2rem auto;
     }
-    h4 {
-        font-weight:400;
-        margin:0;
-        font-size:1em;
+  }
+  .nav > li > a {
+    color: $brand-second;
+    transition: ease 0.5s;
+    &:hover {
+      background-color: $brand-primary;
+      color: $white;
     }
+  }
+}
 
-    .widget-container {
-        padding-bottom:30px;
+.custom-sidebar-wrapper.align-left {
+  text-align: left;
+}
+
+.custom-sidebar-wrapper .nav .current-menu-item a {
+  background-color: $brand-primary;
+}
+
+h3.background-header {
+  background-color: $brand-primary;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: $white;
+  text-align: center;
+}
+
+a.learn-more-link,
+a.seller-book {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: $white;
+  font-family: caviar dreams;
+}
+
+.sidebar-cta-wrapper {
+  background-color: $brand-primary;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+h3.sidebar-cta {
+  font-size: 2.25rem;
+  display: inline;
+  color: $white;
+  padding-left: 0.5rem;
+}
+
+a.sidebar-cta {
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
     }
 }

@@ -53,8 +53,9 @@
         margin-top: .75em;
 
         &:before {
-            content: "Additional Photos";
+            font-family: 'Caviar Dreams', Helvetica, Sans-Serif;
             font-size: 2rem;
+            content: "Additional Photos";
         }
     }
 }
