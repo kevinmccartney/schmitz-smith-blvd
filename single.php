@@ -5,7 +5,11 @@
 */ 
 
 while ( have_posts() ) : the_post(); ?>
-	<div class="article-wrapper col-sm-12 col-md-9">
+	<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+		<div class="article-wrapper col-xs-12 col-md-9">
+	<?php else : ?>
+		<div class="article-wrapper col-xs-12">
+	<?php endif; ?>
     	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         	<?php get_template_part( 'templates/entry', 'single' ); ?>
     	</article>

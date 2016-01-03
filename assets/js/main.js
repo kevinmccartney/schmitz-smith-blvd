@@ -13,14 +13,8 @@ function agentSizer() {
             agentBoxHeightArr.push(jQuery(this).outerHeight(true));
         });
 
-        console.log(agentImgHeightArr);
-        console.log(agentBoxHeightArr);
-
         minImg = Math.max.apply(null, agentBoxHeightArr);
         maxBox = Math.min.apply(null, agentBoxHeightArr);
-
-        console.log(minImg);
-        console.log(maxBox);
 
         if(minImg >= maxBox) {
             agentBox.each(function(index) {

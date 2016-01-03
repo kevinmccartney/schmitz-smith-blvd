@@ -11,12 +11,16 @@ use \hji\AgentRoster\utils\ContactForm;
 
 <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
     <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
-    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-        <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
-    </div>
+        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
+        </div>
     <?php endif; ?>
 </div>
-<div class="entry-content col-sm-12 col-md-9" itemscope itemtype="http://schema.org/Person">
+<?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
+    <div class="entry-content col-sm-12 col-md-9" itemscope itemtype="http://schema.org/Person">
+<?php else : ?>
+    <div class="entry-content col-xs-12" itemscope itemtype="http://schema.org/Person">
+<?php endif; ?>
     <?php 
     while ( have_posts() ) : the_post();
         // template logic
@@ -234,4 +238,11 @@ use \hji\AgentRoster\utils\ContactForm;
         </div>
         </div>
     <?php endwhile; ?>
+</div>
+<div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
+    <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
+        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
+        </div>
+    <?php endif; ?>
 </div>

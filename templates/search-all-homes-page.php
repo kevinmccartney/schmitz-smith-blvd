@@ -3,8 +3,8 @@
 * Template Name: Serach All Homes Page Template
 * Description: A template for the Search All Homes page.
 */
-?>
-<?php while ( have_posts() ) : the_post(); ?>
+
+while ( have_posts() ) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="page-header">
             <?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
@@ -15,7 +15,7 @@
                     <?php dynamic_sidebar( 'search-all-homes-sidebar' ); ?>
                 </div>
             </div>
-            <section class="page-content col-sm-12 col-md-9">
+            <section class="page-content col-xs-12 col-md-9">
         <?php else : ?>
             <section class="page-content col-xs-12">
         <?php endif; ?>

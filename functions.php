@@ -1,6 +1,6 @@
 <?php
 /**
- * Shannon Schmitz Child Theme Functions
+ * Schmitz & Smith Child Theme Functions
  */
 
 /**
@@ -116,7 +116,7 @@ if (!function_exists( 'hji_schmitz_smith_widgets_init' ) ) {
 
 if (!function_exists( 'hji_schmitz_smith_font_loader' ) ) {
     function hji_schmitz_smith_font_loader() {
-        wp_enqueue_style( 'hji_schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css');
+        wp_enqueue_script( 'hji_schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css');
     }
     add_action('wp_enqueue_scripts', 'hji_schmitz_smith_font_loader');
 }
