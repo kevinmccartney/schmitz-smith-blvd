@@ -1,0 +1,518 @@
+@media (max-width: 414px) {
+// .col-sm-2 {
+//     width: 100%!important;
+//     height: 200px!important;
+// }
+
+.neighborhoodcaption h3 {
+    height: 47px!important;
+}
+}
+
+@media (max-width: 768px) {
+.neighborhoodcaption h3 {
+      font-size: 21px!important;
+}
+}
+
+img.aligncenter.size-full.wp-image-4871 {
+    width: 380px!important;
+}
+
+//////////////////// 
+//    CTA Boxes     //
+/////////////////////
+
+.search-by-neighborhood-text {
+    background-color: #000;
+    margin-top: -5rem;
+}
+
+div#neighborhoodwidget img {
+    height: 200px;
+    width: 100%;
+}
+
+.home #neighborhoodwidget .col-sm-2 {
+    width: 25%;
+}
+
+.neighborhoodcaption h3 {
+    color: #fff !important;
+    width: 100% !important;
+    position: relative !important;
+    top: 196px !important;
+    background-color: rgba(0, 0, 0, .7) !important;
+    height: 80px !important;
+    box-shadow: none !important;
+    padding-top: 9px !important;
+    font-size: 26px;
+    padding-left: 12px;
+    text-align: center;
+}
+
+#text-42 > div > div.textwidget > div > div:nth-child(1) > div > div > h3 > a {
+    color: #fff;
+}
+
+#text-42 > div > div.textwidget > div > div:nth-child(2) > div > div > h3 > a {
+    color: #fff;
+}
+
+#text-42 > div > div.textwidget > div > div:nth-child(3) > div > div > h3 > a {
+    color: #fff;
+}
+
+#text-42 > div > div.textwidget > div > div:nth-child(4) > div > div > h3 > a {
+    color: #fff;
+}
+
+
+h1.page-title {
+  background-color: $brand-primary;
+  padding: 20px;
+  color: #fff;
+}
+
+// makes the QS wrapper transparent & not have a border
+.hjitb.quick-search-widget-wrapper {
+  background-color: transparent;
+  border: 0px;
+}
+
+// takes the underline away from the rIDX property title link
+a.listing-title:hover {
+  text-decoration: none;
+}
+
+// aligns the grav form submit button to the center
+.gform_footer.top_label {
+  margin: 1em auto;
+  text-align: center;
+}
+
+// takes away the borders from all grav form buttons 
+.gform_wrapper .gform_button {
+    border: none;
+}
+
+// a custom helper class that creates a fifth column on $screen-md. must be
+// used with another .col-* class for proper inheritence.
+.col-md-fifth {
+  @media(min-width: 992px) {
+    width: 20%;
+  }
+}
+
+// makes the rIDX fields in the sidebar 100% width
+.custom-sidebar-wrapper .hji-fieldwrap input[type="text"] {
+  width: 100% !important;
+}
+
+// centers the rIDX results grid and makes it 75% width on $screen-xs
+.idx-results {
+  @media (max-width: 768px) {
+      width: 75%;
+      margin: auto;
+  }
+}
+
+// a helper class that works in conjunction with the responsive bootstrap
+// class as a wrapper
+.youtube-video-wrapper {
+  @media(min-width: 992px) {
+    width: 65%;
+    margin: auto;
+  }
+}
+
+
+// makes the content of the pages 95vw
+section#primary {
+  width: 95%;
+}
+
+// takes the underline away from the page headers
+.page-header {
+  border-bottom: 0px;
+}
+
+////////////////////
+//    $header     //
+////////////////////
+
+// takes away the border on the header
+.navbar {
+    border: 0px;
+    // a fix so that the absolutely positioned menu won't fall below
+    // the header background.
+    @media(min-width: 1200px){
+      min-height: 160px;
+    }
+}
+
+// takes away the bottom border on the top header area
+.banner .top-header {
+  border-bottom: 0px;
+}
+
+// makes the users sign in bar 100%. always.
+.user-signup-header {
+  width: 100%;
+}
+
+// makes the header widget 95vw above 1200px
+.header-widgets.container {
+  @media(min-width: 1200px) {
+    width: 95vw;
+  }
+}
+
+//styling for the phone number in the header
+.header-phone {
+  font-size: 28px;
+  position: absolute;
+  right: 50px;
+}
+
+// hides the non-mobile contact & social media widgets under 1200px
+.contact-not-mobile,
+.social-media-not-mobile {
+    display: none;
+    @media(min-width: 1200px) {
+        display: block;
+    }
+}
+
+// styling for the not mobile contact & social media buttons
+.social-media-not-mobile .socialmedia-buttons {
+  display: none;
+  @media (min-width: 992px) {
+    display: initial;
+    position: absolute;
+    right: 45px;
+    top: 75px;
+  }
+}
+
+// resets the logo margins
+.banner .header-widgets .blvd-logo {
+    margin: 0px;
+}
+
+//resets the bottom margin on the blvd menu
+.banner .header-widgets .blvd-responsive-menu {
+  margin-bottom: 10px;
+}
+
+// styling for the mobile phone number
+.header-phone-mobile {
+  font-size: 20px;
+}
+
+// hides the mobile contact & social widgets on desktop
+.contact-mobile-header,
+.social-media-mobile-widget {
+    display: block;
+    @media(min-width: 1200px) {
+        display: none;
+    }
+}
+
+// makes sure that the logo doesn't overlap the mobile menu toggle
+img#site-logo {
+  @media(max-width: 1199px) {
+    width: 75%;
+  }
+}
+
+.navbar-nav > li > a {
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.banner .header-widgets .blvd-responsive-menu {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: $brand-primary;
+    color: #fff;
+}
+
+////////////////////
+//   $home-page   //
+////////////////////
+
+// centers the quick search widget title & resets the margins
+.home .widget_sm_quicksearch_widget .widget-title {
+  margin: 2rem auto;
+  h3 {
+    text-align: center;
+    margin: 0px;
+  }
+}
+
+// pins the slideshow to the bottom of the header
+.blvd-slideshow {
+  top: initial;
+}
+
+// pushes all the home widgets down 
+.blvd-home-widgets {
+  margin-top: 47rem;
+}
+
+////////////////////
+// $content-pages //
+////////////////////
+
+// adds a 2rem margin to all content sections not on the homepage
+body:not(.home) #content {
+    margin: 2rem 0px;
+}
+
+h3.relo, 
+.relo-links-wrapper {
+    text-align: center;
+}
+
+a.btn.btn-primary.btn-relo {
+    width: calc(50% - 2rem);
+    margin: 0 1rem;
+}
+
+/* 
+ * BEGIN $pdf-download-button 
+ * these styles govern the button on the $page
+ */
+
+// the container
+.pdf-download-container {
+  width: 100%;
+  margin: 3rem 0rem;
+  text-align: center;
+}
+
+// the text
+a.pdf-download-button {
+  background-color: #95BFD7;
+  color: #fff;
+  padding: 20px;
+  font-variant: small-caps;
+  font-size: 24px;
+  letter-spacing: 2px;
+  transition: ease 1s;
+}
+
+// the button hover effects
+a.pdf-download-button:hover {
+  padding: 25px;
+  background-color: #3F6174;
+  text-decoration: none;
+}
+
+// hides the alphabet search under the main search bar on the 
+// agent roster archive page
+ul#agent-index {
+    display: none;
+}
+
+// this centers the videos on the neighborhood pages 
+.custom-neighborhood-video-wrap {
+    margin: auto;
+    float: none;
+}
+
+////////////////////
+//    $sidebars   //
+////////////////////
+
+.custom-sidebar-wrapper {
+  text-align: right;
+  .widget-title {
+    margin: 0;
+    h3 {
+      font-size: 22px;
+      margin: 2rem auto;
+    }
+  }
+  .nav > li > a {
+    color: $brand-second;
+    &:hover {
+      color: darken( $brand-second , 20% );
+      background-color: transparent;
+    }
+  }
+}
+
+.custom-sidebar-wrapper .nav .current-menu-item a {
+  color: darken( $brand-second , 20% ) !important;
+}
+
+h3.background-header {
+  background-color: #44587B;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+a.learn-more-link,
+a.seller-book {
+  background-color: #44587B;
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 7px;
+  margin-top: 1rem;
+  color: #fff;
+  font-family: caviar dreams;
+  &:hover {
+   color: #ccc;
+    text-decoration: none;
+  }
+}
+
+.sidebar-img {
+  width: 50%;
+}
+
+.sidebar-cta-wrapper {
+  background-color: #44587B;
+  margin: 2rem auto;
+  padding: 5px;
+}
+
+img.sidebar-cta {
+  display: inline-block;
+}
+
+h3.sidebar-cta {
+  font-size: 22px;
+  display: inline;
+  color: #fff;
+  padding-left: 5px;
+}
+
+a.sidebar-cta {
+    color: #fff;
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+}
+
+.custom-sidebar-wrapper.align-left {
+  text-align: left;
+}
+
+.sidebar-img-full {
+    width: 100%;
+}
+
+////////////////////
+//    $footer     //
+////////////////////
+
+// establishes footer-global background, word-break & 
+// aligns all text to the center on $screen-xs
+footer#footer {
+ // background: linear-gradient(#999999, #626262);
+  word-break: break-word;
+  .container {
+    width: 95vw;
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+// text color resets
+.content-info .container, 
+.content-info .idx-compliance {
+  color: #fff;
+}
+
+// link hover behavior resets
+.content-info a:not(.btn):focus, 
+.content-info a:not(.btn):hover {
+  color: #7f7f7f;
+}
+
+// resets some blvd-native & custom inherited styles on footer widget titles
+footer .widget-title h3 {
+  text-transform: none;
+  color: #fff;
+  font-size: 1.5em;
+  border-bottom: $brand-second solid 1px;
+  padding-bottom: 5px;
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+}
+
+// resets some blvd-native styles on footer paragraphs
+footer .textwidget p {
+  color: #fff;
+  font-size: 16px;
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+}
+
+// resets the link hover color in the custom contact wrapepr
+#footer-custom-contact-wrapper a.footer-custom-contact:hover {
+  color: $brand-primary;
+}
+
+//styles for the footer logo wrapper
+.footer-logo-wrapper {
+  text-align: center;
+}
+
+// styles for the footer log0
+img#footer-logo {
+  float: none;
+  margin: auto;
+  width: 75%;
+  @media(min-width: $screen-md) {
+    width: 50%;
+  }
+}
+
+// removes the border above the copyright section in the footer
+footer #copyright {
+    border-top: 0px;
+}
+
+#footer-custom-contact-wrapper > p > a:nth-child(4):hover {
+    color: #ccc;
+}
+
+#footer-custom-contact-wrapper > p > a:nth-child(10):hover {
+    color:  #ccc;
+}
+
+//
+// Working
+// --------------------------------------------------
+
+.custom-video-grid-area-title {
+    font-weight: bolder;
+    font-size: 4.5rem;
+    background-color: #7BABBB;
+    padding: 1rem 4rem;
+}
+
+.custom-video-grid-item {
+    text-align: center;
+}
+
+.custom-homepage-cta-pods {
+    text-align: center;
+    @media(max-width: $screen-md) {
+        margin: 1rem auto;
+    }
+}
