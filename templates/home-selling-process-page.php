@@ -16,7 +16,7 @@
                 </div>
             </div>
             <section class="page-content col-xs-12 col-md-7">
-        <?php else if( is_active_sidebar( 'selling-sidebar' ) ) : ?>
+        <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
             <section class="page-content col-xs-12 col-md-9">
         <?php else : ?>
             <section class="page-content col-xs-12">
@@ -34,7 +34,7 @@
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 </div>
             </div>
-        <?php elseif ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
+        <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
                 <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>

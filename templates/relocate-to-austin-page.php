@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
                 </div>
             </div>
             <section class="page-content col-xs-12 col-md-7">
-        <?php else if( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
+        <?php elseif( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
                 <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post(); ?>
         <?php endif; ?>
             <?php the_content(); ?>
         </section>
-        <?php if ( is_active_sidebar( 'relocation-page' &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
+        <?php if ( is_active_sidebar( 'relocation-page' ) &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper col-xs-12 col-md-3">
                 <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'relocation-page' ); ?>
@@ -39,10 +39,10 @@ while ( have_posts() ) : the_post(); ?>
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 </div>
             </div>
-        <?php else if( is_active_sidebar( 'relocation-page' ) ) : ?>
+        <?php elseif( is_active_sidebar( 'relocation-page' ) ) : ?>
             <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
                 <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-                    <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
+                    <?php dynamic_sidebar( 'relocation-page' ); ?>
                 </div>
             </div>
         <?php endif; ?>
