@@ -47,13 +47,25 @@ div#footer-custom-contact-wrapper {
     text-align: center;
   }
   a {
-    color: $brand-primary-light-20 !important;
+    color: $brand-primary-light-40 !important;
     &:hover,
     &:active,
     &:focus {
-      color: $brand-primary-dark-20 !important;
+      text-decoration: underline;
     }
   }
+}
+
+#footer .nav > li > a {
+    color: $brand-primary-light-40;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      background-color: $white;
+      color: $brand-primary;
+      text-shadow: $brand-second 2px 2px 4px;
+    }
 }
 
 //styles for the footer logo wrapper
