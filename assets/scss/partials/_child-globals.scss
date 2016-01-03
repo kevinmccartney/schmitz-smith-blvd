@@ -10,6 +10,21 @@ textarea,
     @include box-shadow( $boxshadow );
 }
 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+.navbar-nav > li > a, 
+.dropdown-menu > li > a,
+.header-phone, 
+div[id^="hji-theme-main-menu-widget"], 
+.header-phone-mobile, 
+.custom-sidebar-wrapper .nav > li > a {
+    font-family: 'Caviar Dreams', Georgia, Serif;
+}
+
 // tab links
 .nav-tabs >  {
     li > a {
