@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post(); ?>
         </header>
         <?php if ( is_active_sidebar( 'buyers-page-sidebar' ) && is_active_sidebar( 'buying-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-2">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="buying-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'buying-sidebar' ); ?>
                 </div>
             </div>
@@ -25,18 +25,18 @@ while ( have_posts() ) : the_post(); ?>
         </section>
         <?php if ( is_active_sidebar( 'buyers-page-sidebar' ) && is_active_sidebar( 'buying-sidebar') ) : ?>
             <div class="custom-sidebar-wrapper align-left col-xs-12 col-md-3">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="buyers-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'buyers-page-sidebar' ); ?>
                 </div>
             </div>
-            <div class="custom-sidebar-wrapper hidden-md hidden-lg col-xs-12">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left hidden-md hidden-lg col-xs-12">
+                <div id="buying-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'buying-sidebar' ); ?>
                 </div>
             </div>
         <?php elseif( is_active_sidebar('buying-sidebar') ) : ?>
-            <div class="custom-sidebar-wrapper hidden-md hidden-lg col-xs-12">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left hidden-md hidden-lg col-xs-12">
+                <div id="buying-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'buying-sidebar' ); ?>
                 </div>
             </div>

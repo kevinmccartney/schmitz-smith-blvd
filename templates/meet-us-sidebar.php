@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post(); ?>
         </header>
         <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="meet-us-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
                 </div>
             </div>
@@ -22,8 +22,8 @@ while ( have_posts() ) : the_post(); ?>
             <?php the_content(); ?>
         </section>
         <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
-            <div class="custom-sidebar-wrapper hidden-md hidden-lg col-xs-12">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left hidden-md hidden-lg col-xs-12">
+                <div id="meet-us-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
                 </div>
             </div>

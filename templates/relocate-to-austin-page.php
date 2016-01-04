@@ -11,14 +11,14 @@ while ( have_posts() ) : the_post(); ?>
         </header>
         <?php if ( is_active_sidebar( 'relocation-page' ) &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-2">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 </div>
             </div>
             <section class="page-content col-xs-12 col-md-7">
         <?php elseif( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-asustin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 </div>
             </div>
@@ -29,19 +29,19 @@ while ( have_posts() ) : the_post(); ?>
             <?php the_content(); ?>
         </section>
         <?php if ( is_active_sidebar( 'relocation-page' ) &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
-            <div class="custom-sidebar-wrapper col-xs-12 col-md-3">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 col-md-3">
+                <div id="relocation-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'relocation-page' ); ?>
                 </div>
             </div>
-            <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 </div>
             </div>
         <?php elseif( is_active_sidebar( 'relocation-page' ) ) : ?>
-            <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'relocation-page' ); ?>
                 </div>
             </div>

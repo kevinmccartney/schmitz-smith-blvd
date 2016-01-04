@@ -11,7 +11,7 @@ while ( have_posts() ) : the_post(); ?>
         </header>
         <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 </div>
             </div>
@@ -22,8 +22,8 @@ while ( have_posts() ) : the_post(); ?>
             <?php the_content(); ?>
         </section>
         <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
-            <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 </div>
             </div>

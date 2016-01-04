@@ -11,7 +11,7 @@
         </header>
         <?php if ( is_active_sidebar( 'sellers-page-sidebar' ) && is_active_sidebar( 'selling-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-2">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 </div>
             </div>
@@ -25,18 +25,18 @@
         </section>
         <?php if ( is_active_sidebar( 'sellers-page-sidebar' ) && is_active_sidebar( 'selling-sidebar' ) ) : ?>
             <div class="custom-sidebar-wrapper align-left col-xs-12 col-md-3">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="sellers-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'sellers-page-sidebar' ); ?>
                 </div>
             </div>
-            <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 </div>
             </div>
         <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
-            <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 </div>
             </div>
