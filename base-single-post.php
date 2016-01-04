@@ -5,7 +5,7 @@
 */ 
 
 while ( have_posts() ) : the_post(); ?>
-	<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+	<?php if ( is_active_sidebar( 'blog-sidebar' ) && !in_category('successful-sales') ) : ?>
 		<div class="article-wrapper col-xs-12 col-md-9">
 	<?php else : ?>
 		<div class="article-wrapper col-xs-12">
@@ -14,7 +14,7 @@ while ( have_posts() ) : the_post(); ?>
         	<?php get_template_part( 'templates/entry', 'single' ); ?>
     	</article>
 	</div>
-	<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+	<?php if ( is_active_sidebar( 'blog-sidebar' ) && !in_category('successful-sales') ) : ?>
 		<div id="primary-sidebar" class="primary-sidebar widget-area col-xs-12 col-md-3" role="complementary">
     		<?php dynamic_sidebar( 'blog-sidebar' ); ?>
 		</div>
