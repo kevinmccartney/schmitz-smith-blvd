@@ -18,9 +18,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'explore-austin-sidebar' ) && is_active_sidebar( 'relocation-page' ) ) : ?>
            
-            <div class="custom-sidebar-wrapper visible-lg col-md-lg-2">
+            <div class="custom-sidebar-wrapper visible-lg col-lg-2">
                
-                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 
@@ -36,7 +36,7 @@ while ( have_posts() ) : the_post(); ?>
             
             <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                 
-                <div id="explore-asustin-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 
@@ -64,33 +64,37 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'relocation-page' ) &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 col-lg-3">
-                
-                <div id="relocation-page-sidebar" class="primary-sidebar widget-area" role="complementary">
-                   
-                    <?php dynamic_sidebar( 'relocation-page' ); ?>
-                
-                </div>
-            
-            </div>
-            
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
-                
-                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="col-xs-12">
+
+                <div class="custom-sidebar-wrapper col-xs-12 col-md-6 col-lg-3">
                     
-                    <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
+                    <div id="relocation-page-sidebar" class="sidebar widget-area" role="complementary">
+                       
+                        <?php dynamic_sidebar( 'relocation-page' ); ?>
+                    
+                    </div>
                 
                 </div>
-            
+                
+                <div class="custom-sidebar-wrapper col-xs-12 col-md-6 hidden-lg">
+                    
+                    <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
+                        
+                        <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
+                    
+                    </div>
+                
+                </div>
+
             </div>
 
         <!-- adding the explore austin page sidebar for mobile -->
 
         <?php elseif( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
 
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
+            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 hidden-lg">
                 
-                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 
@@ -102,9 +106,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php elseif( is_active_sidebar( 'relocation-page' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
+            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 hidden-lg">
                
-                <div id="relocation-page-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="relocation-page-sidebar" class="sidebar widget-area" role="complementary">
                    
                     <?php dynamic_sidebar( 'relocation-page' ); ?>
                 

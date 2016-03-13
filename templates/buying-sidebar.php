@@ -18,9 +18,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'buying-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
+            <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
                 
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="buying-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'buying-sidebar' ); ?>
                 
@@ -44,9 +44,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'buying-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
+            <div class="custom-sidebar-wrapper hidden-md hidden-lg col-xs-12">
                 
-                <div id="buying-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="buying-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'buying-sidebar' ); ?>
                 

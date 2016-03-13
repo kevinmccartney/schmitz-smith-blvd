@@ -20,7 +20,7 @@ while ( have_posts() ) : the_post(); ?>
             
             <div class="custom-sidebar-wrapper visible-lg col-lg-2">
                 
-                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 
@@ -36,7 +36,7 @@ while ( have_posts() ) : the_post(); ?>
 
             <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                 
-                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 
@@ -66,33 +66,37 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'sellers-page-sidebar' ) && is_active_sidebar( 'selling-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 col-lg-3">
-                
-                <div id="sellers-page-sidebar" class="primary-sidebar widget-area" role="complementary">
+            <div class="col-xs-12">
+
+                <div class="custom-sidebar-wrapper col-xs-12 col-lg-3">
                     
-                    <?php dynamic_sidebar( 'sellers-page-sidebar' ); ?>
+                    <div id="sellers-page-sidebar" class="sidebar widget-area" role="complementary">
+                        
+                        <?php dynamic_sidebar( 'sellers-page-sidebar' ); ?>
+                    
+                    </div>
                 
                 </div>
-            
-            </div>
-            
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
                 
-                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div class="custom-sidebar-wrapper col-xs-12 hidden-lg">
                     
-                    <?php dynamic_sidebar( 'selling-sidebar' ); ?>
+                    <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
+                        
+                        <?php dynamic_sidebar( 'selling-sidebar' ); ?>
+                    
+                    </div>
                 
                 </div>
-            
+
             </div>
 
         <!-- adding the sellers page sidebar if the selling sidebar isn't active  -->
 
         <?php elseif( is_active_sidebar( 'sellers-page-sidebar' ) ) : ?>
 
-            <div class="custom-sidebar-wrapper align-left col-xs-12 col-lg-3">
+            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 col-lg-3">
                 
-                <div id="sellers-page-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="sellers-page-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'sellers-page-sidebar' ); ?>
                 
@@ -104,9 +108,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
+            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 hidden-lg">
                 
-                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                 

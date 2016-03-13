@@ -18,9 +18,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper visibe-lg col-lg-3">
+            <div class="custom-sidebar-wrapper visible-md visibe-lg col-md-3">
                 
-                <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
                   
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 
@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-lg-9">
+            <section class="page-content col-xs-12 col-md-9">
         
         <?php else : ?>
             
@@ -44,9 +44,9 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left visible-lg col-xs-12">
+            <div class="custom-sidebar-wrapper visible-md visible-lg col-xs-12">
                 
-                <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
+                <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
                     
                     <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
                 

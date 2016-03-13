@@ -36,9 +36,9 @@
 
                     <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
                     
-                        <div class="custom-sidebar-wrapper visible-lg col-lg-3">
+                        <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
                             
-                            <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
+                            <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
                                 
                                 <?php dynamic_sidebar( 'selling-sidebar' ); ?>
                             
@@ -46,7 +46,7 @@
                         
                         </div>
                     
-                        <div id="content" class="col-xs-12 col-lg-9" role="main">
+                        <div id="content" class="col-xs-12 col-md-9" role="main">
                     
                     <?php else : ?>
                         
@@ -66,7 +66,7 @@
 
                         <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
                         
-                            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
+                            <div class="custom-sidebar-wrapper col-xs-12 hidden-lg">
                                 
                                 <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                                     

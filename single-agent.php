@@ -9,9 +9,9 @@ use \hji\AgentRoster\utils\ContactForm;
 
 if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
-    <div class="custom-sidebar-wrapper visible-lg col-lg-3">
+    <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
         
-        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+        <div id="meet-us-sidebar" class="sidebar widget-area" role="complementary">
             
             <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
        
@@ -19,7 +19,7 @@ if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
     </div>
   
-    <div class="entry-content col-xs-12 col-lg-9" itemscope itemtype="http://schema.org/Person">
+    <div class="entry-content col-xs-12 col-md-9" itemscope itemtype="http://schema.org/Person">
 
 <?php else : ?>
     
@@ -71,10 +71,12 @@ endforeach; ?>
             <?php endif; ?>
             
             <div class="contact-info">
+                
                 <div class="office-contact-info">
                 
                 <!-- pull office info -->
                 <?php if ( isset( $fields['office_id'] ) ) :
+                    
                     $office_meta = get_post_meta( $fields['office_id'] );
                     
                     foreach ( $office_meta as $key => $value ) :
@@ -180,7 +182,7 @@ endforeach; ?>
                 $icons = false;
                 $soc_med = array( 'facebook', 'google_plus', 'twitter', 'linkedin', 'pinterest', 'youtube' );
                 
-                foreach ( $soc_med as $item ) {
+                foreach ( $soc_med as $item ) :
                     
                     if ( isset( $fields[$item] ) ) :
                         
@@ -428,7 +430,8 @@ endforeach; ?>
         
         </div>
     
-    <?php endwhile; ?>
+
+<?php endwhile; ?>
 
 </div>
 
@@ -436,9 +439,9 @@ endforeach; ?>
 
 <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
-    <div class="custom-sidebar-wrapper col-xs-12 hidden-lg">
+    <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
         
-        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+        <div id="meet-us-sidebar" class="sidebar widget-area" role="complementary">
             
             <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
         

@@ -35,9 +35,9 @@
                     
                     <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
                         
-                        <div class="blog-sidebar col-lg-3 visible-lg">
+                        <div class="custom-sidebar-wrapper visible-md visible-lg col-xs-12 col-md-3">
                             
-                            <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                            <div id="blog-sidebar" class="sidebar widget-area" role="complementary">
                                 
                                 <?php dynamic_sidebar( 'blog-sidebar' ); ?>
                             
@@ -66,9 +66,9 @@
                 
                 <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
                     
-                    <div class="blog-sidebar col-xs-12 hidden-lg">
+                    <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
                         
-                        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                        <div id="blog-sidebar" class="sidebar widget-area" role="complementary">
                           
                             <?php dynamic_sidebar( 'blog-sidebar' ); ?>
                         
