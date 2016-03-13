@@ -18,7 +18,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'explore-austin-sidebar' ) && is_active_sidebar( 'relocation-page' ) ) : ?>
            
-            <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-2">
+            <div class="custom-sidebar-wrapper visible-lg col-md-lg-2">
                
                 <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -28,13 +28,13 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-md-7">
+            <section class="page-content col-xs-12 col-lg-7">
 
         <!-- adding the explore austin sidebar sidebar & changing the main content class -->
         
         <?php elseif( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
+            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                 
                 <div id="explore-asustin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -44,11 +44,11 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-md-9">
+            <section class="page-content col-xs-12 col-lg-9">
 
         <?php elseif( is_active_sidebar( 'relocation-page-sidebar' ) ) : ?>
 
-            <section class="page-content col-xs-12 col-md-9">
+            <section class="page-content col-xs-12 col-lg-9">
         
         <?php else : ?>
                 
@@ -64,7 +64,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'relocation-page' ) &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 col-md-3">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 col-lg-3">
                 
                 <div id="relocation-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                    
@@ -74,7 +74,7 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
                 
                 <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -88,7 +88,7 @@ while ( have_posts() ) : the_post(); ?>
 
         <?php elseif( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
 
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
                 
                 <div id="explore-austin-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -102,7 +102,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php elseif( is_active_sidebar( 'relocation-page' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
                
                 <div id="relocation-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                    

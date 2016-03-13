@@ -9,7 +9,7 @@ use \hji\AgentRoster\utils\ContactForm;
 
 if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
-    <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
+    <div class="custom-sidebar-wrapper visible-lg col-lg-3">
         
         <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
             
@@ -19,7 +19,7 @@ if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
     </div>
   
-    <div class="entry-content col-sm-12 col-md-9" itemscope itemtype="http://schema.org/Person">
+    <div class="entry-content col-xs-12 col-lg-9" itemscope itemtype="http://schema.org/Person">
 
 <?php else : ?>
     
@@ -436,7 +436,7 @@ endforeach; ?>
 
 <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
-    <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
+    <div class="custom-sidebar-wrapper col-xs-12 hidden-lg">
         
         <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
             

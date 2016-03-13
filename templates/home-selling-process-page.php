@@ -18,7 +18,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'selling-sidebar' ) && is_active_sidebar( 'sellers-page-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-2">
+            <div class="custom-sidebar-wrapper visible-lg col-lg-2">
                 
                 <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -28,13 +28,13 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-md-7">
+            <section class="page-content col-xs-12 col-lg-7">
 
         <!-- adding the selling sidebar & changing the main content class if only the selling sidebar is active -->
 
         <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
 
-            <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
+            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                 
                 <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -44,13 +44,13 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-md-9">
+            <section class="page-content col-xs-12 col-lg-9">
 
         <!-- changing the main content class if only the sellers page sidebar is active -->
         
         <?php elseif( is_active_sidebar( 'sellers-page-sidebar' ) ) : ?>
             
-            <section class="page-content col-xs-12 col-md-9">
+            <section class="page-content col-xs-12 col-lg-9">
         
         <?php else : ?>
             
@@ -66,7 +66,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'sellers-page-sidebar' ) && is_active_sidebar( 'selling-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 col-md-3">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 col-lg-3">
                 
                 <div id="sellers-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -76,7 +76,7 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
                 
                 <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -90,7 +90,7 @@ while ( have_posts() ) : the_post(); ?>
 
         <?php elseif( is_active_sidebar( 'sellers-page-sidebar' ) ) : ?>
 
-            <div class="custom-sidebar-wrapper align-left col-xs-12 col-md-3">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 col-lg-3">
                 
                 <div id="sellers-page-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -104,7 +104,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-md hidden-lg">
+            <div class="custom-sidebar-wrapper align-left col-xs-12 hidden-lg">
                 
                 <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
                     

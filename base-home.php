@@ -35,7 +35,7 @@
                     
                     <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
                         
-                        <div class="blog-sidebar col-md-3 visible-md visible-lg">
+                        <div class="blog-sidebar col-lg-3 visible-lg">
                             
                             <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                                 
@@ -45,7 +45,7 @@
                         
                         </div>
                         
-                        <div id="content" class="col-xs-12 col-md-9" role="main">
+                        <div id="content" class="col-xs-12 col-lg-9" role="main">
 
                     <?php else : ?>
 
@@ -66,7 +66,7 @@
                 
                 <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
                     
-                    <div class="blog-sidebar col-xs-12 hidden-md hidden-lg">
+                    <div class="blog-sidebar col-xs-12 hidden-lg">
                         
                         <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
                           

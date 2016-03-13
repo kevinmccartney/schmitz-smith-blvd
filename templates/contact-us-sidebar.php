@@ -18,7 +18,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
+            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                 
                 <div id="meet-us-sidebar" class="primary-sidebar widget-area" role="complementary">
                     
@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-md-9">
+            <section class="page-content col-xs-12 col-lg-9">
         
         <?php else : ?>
             
@@ -44,7 +44,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper align-left hidden-md hidden-lg col-xs-12">
+            <div class="custom-sidebar-wrapper align-left visible-xs col-xs-12">
                 
                 <div id="meet-us-sidebar" class="primary-sidebar widget-area" role="complementary">
                     

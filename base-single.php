@@ -40,7 +40,7 @@
 
                         <?php if ( is_active_sidebar( 'blog-sidebar' ) && !in_category('successful-sales') ) : ?>
                             
-                            <div class="article-wrapper col-xs-12 col-md-9">
+                            <div class="article-wrapper col-xs-12 col-lg-9">
                         
                         <?php else : ?>
                             
@@ -56,7 +56,7 @@
                             
                         <?php if ( is_active_sidebar( 'blog-sidebar' ) && !in_category('successful-sales') ) : ?>
                                 
-                            <div id="primary-sidebar" class="primary-sidebar widget-area col-xs-12 col-md-3" role="complementary">
+                            <div id="primary-sidebar" class="primary-sidebar widget-area col-xs-12 col-lg-3" role="complementary">
                                 
                                 <?php dynamic_sidebar( 'blog-sidebar' ); ?>
                             
