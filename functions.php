@@ -1,22 +1,18 @@
 <?php
 /**
- * Schmitz & Smith Child Theme Functions
- */
-
-/**
  * Sets our SCSS constant for the improved build process
  * REQUIRED
  *
  * @since 2.7.0
  */
-if ( !defined( 'HJI_BLVD_SCSS' ) ) {
+if ( !defined( 'HJI_BLVD_SCSS' ) ) :
     define( 'HJI_BLVD_SCSS', true );
-}
+endif;
 
 /**
- * Registering Additional Widgets & de-registering a few we don't need
+ * Registering Additional Widgets & deregistering a few we don't need
 */
-if (!function_exists( 'hji_schmitz_smith_widgets_init' ) ) {
+if ( !function_exists( 'hji_schmitz_smith_widgets_init' ) ) :
     function hji_schmitz_smith_widgets_init() {
         register_sidebar( array(
             'id'            => 'buying-sidebar',
@@ -110,20 +106,25 @@ if (!function_exists( 'hji_schmitz_smith_widgets_init' ) ) {
         unregister_sidebar( 'idx-horizontal-search');
         unregister_sidebar( 'blvd-main-sidebarwidgets');
     }
-    add_action('widgets_init', 'hji_schmitz_smith_widgets_init', 11);
-}
+    add_action( 'widgets_init', 'hji_schmitz_smith_widgets_init', 11 );
+endif;
 
-
-if (!function_exists( 'hji_schmitz_smith_font_loader' ) ) {
+/**
+ * Loading in the Caviar Dreams font
+ */
+if ( !function_exists( 'hji_schmitz_smith_font_loader' ) ) :
     function hji_schmitz_smith_font_loader() {
-        wp_enqueue_style( 'hji_schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css');
+        wp_enqueue_style( 'hji_schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css' );
     }
-    add_action('wp_enqueue_scripts', 'hji_schmitz_smith_font_loader');
-}
+    add_action( 'wp_enqueue_scripts', 'hji_schmitz_smith_font_loader' );
+endif;
 
-if (!function_exists('hji_schmitz_smith_enqueue_scripts')) {
+/**
+ * Adding child theme js
+ */
+if ( !function_exists( 'hji_schmitz_smith_enqueue_scripts' ) ) :
     function hji_schmitz_smith_enqueue_scripts() {
         wp_enqueue_script( 'hji_schmitz_smith_scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), null, true );
     }
-    add_action('wp_enqueue_scripts', 'hji_schmitz_smith_enqueue_scripts');
-}
+    add_action( 'wp_enqueue_scripts', 'hji_schmitz_smith_enqueue_scripts' );
+endif;
