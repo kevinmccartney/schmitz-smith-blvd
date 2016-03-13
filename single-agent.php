@@ -434,19 +434,3 @@ endforeach; ?>
 <?php endwhile; ?>
 
 </div>
-
-<!-- adds meet us sidebar for mobile -->
-
-<?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
-    
-    <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-        
-        <div id="meet-us-sidebar" class="sidebar widget-area" role="complementary">
-            
-            <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
-        
-        </div>
-    
-    </div>
-
-<?php endif; ?>

@@ -25,7 +25,7 @@
 
             <section id="primary" class="primary-wrapper container">
             
-            <?php do_action( 'hji_theme_layout_before' ); ?>
+                <?php do_action( 'hji_theme_layout_before' ); ?>
                 
                 <div class="row">
                 
@@ -45,7 +45,7 @@
                         
                         </div>
                         
-                        <div id="content" class="col-xs-12 col-lg-9" role="main">
+                        <div id="content" class="col-xs-12 col-md-9" role="main">
 
                     <?php else : ?>
 
@@ -53,31 +53,15 @@
 
                     <?php endif; ?>
                     
-                    
-                    <?php do_action( 'hji_theme_before_content_col' ); ?>
-                   
-                    <?php include hji_theme_template_path(); ?>
-                    
-                    <?php do_action( 'hji_theme_after_content_col' ); ?>
+                            <?php do_action( 'hji_theme_before_content_col' ); ?>
+                           
+                            <?php include hji_theme_template_path(); ?>
+                            
+                            <?php do_action( 'hji_theme_after_content_col' ); ?>
+
+                        </div>
                 
                 </div>
-                
-                <!-- adding the blog sidebar for mobile -->
-                
-                <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
-                    
-                    <div class="custom-sidebar-wrapper col-xs-12 hidden-md hidden-lg">
-                        
-                        <div id="blog-sidebar" class="sidebar widget-area" role="complementary">
-                          
-                            <?php dynamic_sidebar( 'blog-sidebar' ); ?>
-                        
-                        </div>
-                   
-                    </div>
-
-                <?php endif; ?>
-
                 
                 <?php do_action( 'hji_theme_before_sidebar' ); ?>
                 

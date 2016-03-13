@@ -54,29 +54,13 @@
                     
                     <?php endif; ?>
                         
-                        <?php do_action( 'hji_theme_before_content_col' ); ?>
-                        
-                        <?php include hji_theme_template_path(); ?>
-                        
-                        <?php do_action( 'hji_theme_after_content_col' ); ?>
+                            <?php do_action( 'hji_theme_before_content_col' ); ?>
+                            
+                            <?php include hji_theme_template_path(); ?>
+                            
+                            <?php do_action( 'hji_theme_after_content_col' ); ?>
                         
                         </div>
-                        
-                        <!-- adding the selling sidebar for mobile -->
-
-                        <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
-                        
-                            <div class="custom-sidebar-wrapper col-xs-12 hidden-lg">
-                                
-                                <div id="selling-sidebar" class="primary-sidebar widget-area" role="complementary">
-                                    
-                                    <?php dynamic_sidebar( 'selling-sidebar' ); ?>
-                                
-                                </div>
-                            
-                            </div>
-                        
-                        <?php endif; ?>
 
                         <?php do_action( 'hji_theme_before_sidebar' ); ?>
                         

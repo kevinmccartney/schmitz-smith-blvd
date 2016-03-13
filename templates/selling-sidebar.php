@@ -28,7 +28,7 @@ while ( have_posts() ) : the_post(); ?>
             
             </div>
             
-            <section class="page-content col-xs-12 col-lg-9">
+            <section class="page-content col-xs-12 col-md-9">
         
         <?php else : ?>
             
@@ -39,23 +39,6 @@ while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
         
             </section>
-        
-        <!-- adding sidebar for mobile -->
-
-        <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
-            
-            <div class="custom-sidebar-wrapper hidden-md hidden-lg col-xs-12">
-                
-                <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
-                    
-                    <?php dynamic_sidebar( 'selling-sidebar' ); ?>
-                
-                </div>
-            
-            </div>
-        
-
-        <?php endif; ?>
         
         <footer>
            

@@ -48,25 +48,9 @@
                             
                         <?php endif; ?>
                                 
-                            <?php include hji_theme_template_path(); ?>
+                                <?php include hji_theme_template_path(); ?>
                             
                             </div>
-                            
-                        <!-- adding the blog sidebar for mobile -->
-                            
-                        <?php if ( is_active_sidebar( 'blog-sidebar' ) && !in_category('successful-sales') ) : ?>
-
-                            <div class="custom-sidebar-wrapper col-xs-12 col-md-3">
-                
-                                <div id="blog-sidebar" class="sidebar widget-area" role="complementary">
-                                
-                                    <?php dynamic_sidebar( 'blog-sidebar' ); ?>
-
-                                </div>
-                            
-                            </div>
-                            
-                        <?php endif; ?>
                             
                         <?php get_template_part( 'templates/nav', 'below' ); ?>
                            
