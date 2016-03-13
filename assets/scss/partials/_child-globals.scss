@@ -111,3 +111,12 @@ section#primary {
 .page-header {
   border-bottom: 0px;
 }
+
+// forces the save search button to have a grey background on IOS
+input.save-search-btn.btn {
+    background-color: #C0C0C0;
+}
+
+.hjitb.quick-search-widget-wrapper {
+    font-size: 14px;
+}

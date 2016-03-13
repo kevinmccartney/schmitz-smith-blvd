@@ -18,6 +18,10 @@ article.post {
     }
 }
 
+.custom-video-grid-area-title {
+    color: $white;
+}
+
 // a helper class that works in conjunction with the responsive bootstrap
 // class as a wrapper
 .youtube-video-wrapper {
@@ -89,5 +93,13 @@ ul#agent-index {
     text-align: center;
     @media(max-width: $screen-md) {
         margin: 1rem auto;
+    }
+}
+
+// follow blog page
+.follow-blog-form-wrapper {
+    @media(min-width: $screen-sm) {
+        width: 75%;
+        margin: auto;
     }
 }

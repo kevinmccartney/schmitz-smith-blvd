@@ -16,9 +16,20 @@
 // pins the slideshow to the bottom of the header
 .blvd-slideshow {
   top: initial;
+  box-shadow: $brand-second 0px 5px 10px;
 }
 
 // pushes all the home widgets down 
 .blvd-home-widgets {
   margin-top: 47rem;
+}
+
+.custom-homepage-cta-pods {
+    opacity: 0.8;
+    transition: ease 0.5s;
+    &:hover,
+    &:active,
+    &:focus {
+        opacity: 1;
+    }
 }
