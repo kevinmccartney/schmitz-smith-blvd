@@ -7,7 +7,7 @@ use \hji\AgentRoster\utils\ContactForm;
 
 // adding the sidebar & changing the main content class
 
-if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
+if( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
     
     <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
         
@@ -27,16 +27,16 @@ if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
 
 <?php endif;
  
-while ( have_posts() ) : the_post();
+while( have_posts() ) : the_post();
 
 // template logic
 $agent_id = get_the_ID();
 $meta = get_post_meta(get_the_ID());
 $fields = array();
         
-foreach ( $meta as $key => $value ) :
+foreach( $meta as $key => $value ) :
     
-    if ( '_cmb_' == substr( $key, 0, 5 ) ) :
+    if( '_cmb_' == substr( $key, 0, 5 ) ) :
         
         $fields[str_replace( '_cmb_', '', $key )] = $value[0];
     
@@ -50,13 +50,13 @@ endforeach; ?>
             
             <?php echo $fields['first_name'] . ' ' . $fields['last_name'];
             
-            if ( isset( $fields['title'] ) ) : ?>
+            if( isset( $fields['title'] ) ) : ?>
                 
                 <span class="title" itemprop="jobTitle"><?php echo $fields['title']; ?></span>
             
             <?php endif;
             
-            if ( isset( $fields['designations'] ) ) : ?>
+            if( isset( $fields['designations'] ) ) : ?>
                 
                 <span class="designations"><?php echo $fields['designations']; ?></span>
             
@@ -64,7 +64,7 @@ endforeach; ?>
             
             </h1>
             
-            <?php if ( has_post_thumbnail() ) : ?>
+            <?php if( has_post_thumbnail() ) : ?>
                 
                 <div class="agent-photo" itemprop="image"><?php the_post_thumbnail( 'agent-roster-photo' ); ?></div>
             
@@ -75,7 +75,7 @@ endforeach; ?>
                 <div class="office-contact-info">
                 
                 <!-- pull office info -->
-                <?php if ( isset( $fields['office_id'] ) ) :
+                <?php if( isset( $fields['office_id'] ) ) :
                     
                     $office_meta = get_post_meta( $fields['office_id'] );
                     
@@ -89,7 +89,7 @@ endforeach; ?>
                     
                     endforeach;
                     
-                    if ( isset( $office['address'] ) && isset( $office['city'] ) && isset( $office['state_province'] ) && isset( $office['postal_code'] ) ) :
+                    if( isset( $office['address'] ) && isset( $office['city'] ) && isset( $office['state_province'] ) && isset( $office['postal_code'] ) ) :
                         
                         $office_address =
                         '<span itemprop="streetAddress">'. $office['address'] . '</span><br />' .
@@ -101,7 +101,7 @@ endforeach; ?>
                     
                     <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                     
-                    <?php if ( isset( $office['office_name'] ) ) : ?>
+                    <?php if( isset( $office['office_name'] ) ) : ?>
                         
                         <span class="office-name" itemprop="affiliation"><a href="<?php echo get_permalink( $fields['office_id'] ); ?>">
                             
@@ -111,7 +111,7 @@ endforeach; ?>
                     
                     <?php endif; ?>
                     
-                    <?php if ( isset( $office_address ) ) : ?>
+                    <?php if( isset( $office_address ) ) : ?>
                         
                         <span class="office-address" ><?php echo $office_address; ?></span><br />
                     
@@ -125,7 +125,7 @@ endforeach; ?>
                 
                 <div class="agent-contact-info">
                 
-                <?php if ( isset( $fields['office_phone'] ) ) : ?>
+                <?php if( isset( $fields['office_phone'] ) ) : ?>
                     
                     <span class="office-phone" itemprop="telephone">
                     
@@ -135,7 +135,7 @@ endforeach; ?>
                 
                 <?php endif;
                 
-                if ( isset( $fields['mobile_phone'] ) ) : ?>
+                if( isset( $fields['mobile_phone'] ) ) : ?>
                     
                     <span class="mobile-phone" itemprop="telephone">
                     
@@ -145,7 +145,7 @@ endforeach; ?>
                 
                 <?php endif;
                 
-                if ( isset( $fields['fax'] ) ) : ?>
+                if( isset( $fields['fax'] ) ) : ?>
                     
                     <span class="fax" itemprop="faxNumber">
                     
@@ -154,7 +154,7 @@ endforeach; ?>
                     </span><br />
                 <?php endif;
                 
-                if ( isset( $fields['email'] ) ) : ?>
+                if( isset( $fields['email'] ) ) : ?>
                     
                     <span class="email" itemprop="email">
                     
@@ -164,7 +164,7 @@ endforeach; ?>
                 
                 <?php endif;
                 
-                if ( isset( $fields['website'] ) ) : ?>
+                if( isset( $fields['website'] ) ) : ?>
                     
                     <span class="website" itemprop="url">
                     
@@ -182,9 +182,9 @@ endforeach; ?>
                 $icons = false;
                 $soc_med = array( 'facebook', 'google_plus', 'twitter', 'linkedin', 'pinterest', 'youtube' );
                 
-                foreach ( $soc_med as $item ) :
+                foreach( $soc_med as $item ) :
                     
-                    if ( isset( $fields[$item] ) ) :
+                    if( isset( $fields[$item] ) ) :
                         
                         $icon_name = $item;
                         $icons .= '<a target="_blank" class="agent-roster-soc-media" href="' . $fields[$item] . '"><img class="' . $icon_name . '" src="' . AGRO_IMAGES . 'iconset/' . $icon_name . '.png" alt="' . ucwords( str_replace('_', ' ', $icon_name) ) . ' Icon" title="' . ucwords( str_replace('_', ' ', $icon_name) ). ' Profile of ' . $fields['first_name'] . ' ' . $fields['last_name'] . '"/></a>';
@@ -193,7 +193,7 @@ endforeach; ?>
                 
                 endforeach;
                 
-                if ( $icons ) :
+                if( $icons ) :
                     
                     echo $icons;
                 
@@ -206,7 +206,7 @@ endforeach; ?>
         
         </div>
         
-        <?php if ( isset( $fields['email'] ) ) : ?>
+        <?php if( isset( $fields['email'] ) ) : ?>
             
             <div class="calls2action">
             
@@ -221,7 +221,7 @@ endforeach; ?>
         // Pre-load Shortcodes
         $tabs = array();
         
-        if ( isset( $fields['sm_map'] ) ) :
+        if( isset( $fields['sm_map'] ) ) :
             
             $sm_map = apply_filters( 'the_content', htmlspecialchars_decode( $fields['sm_map'] ) );
             
@@ -229,7 +229,7 @@ endforeach; ?>
         
         endif;
         
-        if ( isset( $fields['agent_listings'] ) ) :
+        if( isset( $fields['agent_listings'] ) ) :
             
             $agent_listings = do_shortcode( htmlspecialchars_decode( $fields['agent_listings'] ) );
             
@@ -237,7 +237,7 @@ endforeach; ?>
         
         endif;
         
-        if ( isset( $fields['community_data'] ) ) :
+        if( isset( $fields['community_data'] ) ) :
             
             $community_data = do_shortcode( htmlspecialchars_decode( $fields['community_data'] ) );
             
@@ -257,7 +257,7 @@ endforeach; ?>
             </li>
         
             
-            <?php if ( isset( $sm_map ) ) : ?>
+            <?php if( isset( $sm_map ) ) : ?>
                 
                 <li class="tab_sm_map">
                     
@@ -267,7 +267,7 @@ endforeach; ?>
             
             <?php endif;
             
-            if ( isset( $agent_listings ) ) : ?>
+            if( isset( $agent_listings ) ) : ?>
                 
                 <li class="tab_agent_listings">
                     
@@ -277,7 +277,7 @@ endforeach; ?>
             
             <?php endif;
             
-            if ( isset( $community_data ) ) : ?>
+            if( isset( $community_data ) ) : ?>
                 
                 <li class="tab_community_data">
                     
@@ -293,7 +293,7 @@ endforeach; ?>
                 
                 </li>
            
-            <?php if ( $recent_posts = AgentRoster::get_agent_recent_posts( $fields['first_name'] . ' ' . $fields['last_name'] ) ) : ?>
+            <?php if( $recent_posts = AgentRoster::get_agent_recent_posts( $fields['first_name'] . ' ' . $fields['last_name'] ) ) : ?>
                 
                 <li class="tab_blog">
                    
@@ -303,7 +303,7 @@ endforeach; ?>
             
             <?php endif;
             
-            if ( $team = AgentRoster::get_team( $post->ID ) ) : ?>
+            if( $team = AgentRoster::get_team( $post->ID ) ) : ?>
                 
                 <li class="tab_team">
                     
@@ -313,7 +313,7 @@ endforeach; ?>
             
             <?php endif;
             
-            if ( isset( $fields['custom_tab_name'] ) ) : ?>
+            if( isset( $fields['custom_tab_name'] ) ) : ?>
                
                 <li class="tab_custom">
                    
@@ -337,7 +337,7 @@ endforeach; ?>
             
             </div>
             
-            <?php foreach ( $tabs as $key => &$value ) : ?>
+            <?php foreach( $tabs as $key => &$value ) : ?>
             
                 <div role="tabpanel" class="tab-pane" id="<?php echo $key; ?>">
                     
@@ -351,7 +351,7 @@ endforeach; ?>
                 
                 <?php echo Testimonials::get_agent_testimonials( get_the_ID() ); ?>
                 
-                <?php if ( isset( $fields['email'] ) ) : ?>
+                <?php if( isset( $fields['email'] ) ) : ?>
                     
                     <h2 class="send-me-testimonials">Send Me Your Testimonial</h2>
                     
@@ -361,7 +361,7 @@ endforeach; ?>
             
             </div>
             
-            <?php if ( $recent_posts ) : ?>
+            <?php if( $recent_posts ) : ?>
                 
                 <div role="tabpanel" class="tab-pane" id="blog">
                     
@@ -373,7 +373,7 @@ endforeach; ?>
             
             <?php endif; ?>
             
-            <?php if ( isset( $team ) ) : ?>
+            <?php if( isset( $team ) ) : ?>
                 
                 <div role="tabpanel" class="tab-pane" id="team">
                     
@@ -383,7 +383,7 @@ endforeach; ?>
             
             <?php endif; ?>
             
-            <?php if ( isset( $fields['custom_tab_content'] ) ) : ?>
+            <?php if( isset( $fields['custom_tab_content'] ) ) : ?>
                 
                 <div role="tabpanel" class="tab-pane" id="custom">
                     
@@ -406,7 +406,7 @@ endforeach; ?>
                 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 
-                <?php if ( isset( $fields['email'] ) ) :
+                <?php if( isset( $fields['email'] ) ) :
                     $contact_form = new ContactForm();
                     
                     echo $contact_form->form( $fields['email'] );

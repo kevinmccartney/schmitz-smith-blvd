@@ -5,14 +5,14 @@
  *
  * @since 2.7.0
  */
-if ( !defined( 'HJI_BLVD_SCSS' ) ) :
+if( !defined( 'HJI_BLVD_SCSS' ) ) :
     define( 'HJI_BLVD_SCSS', true );
 endif;
 
 /**
  * Registering Additional Widgets & deregistering a few we don't need
 */
-if ( !function_exists( 'hji_schmitz_smith_widgets_init' ) ) :
+if( !function_exists( 'hji_schmitz_smith_widgets_init' ) ) :
     function hji_schmitz_smith_widgets_init() {
         register_sidebar( array(
             'id'            => 'buying-sidebar',
@@ -112,7 +112,7 @@ endif;
 /**
  * Loading in the Caviar Dreams font
  */
-if ( !function_exists( 'hji_schmitz_smith_font_loader' ) ) :
+if( !function_exists( 'hji_schmitz_smith_font_loader' ) ) :
     function hji_schmitz_smith_font_loader() {
         wp_enqueue_style( 'hji_schmitz_smith_font', get_stylesheet_directory_uri() . '/assets/css/fonts.css' );
     }
@@ -122,7 +122,7 @@ endif;
 /**
  * Adding child theme js
  */
-if ( !function_exists( 'hji_schmitz_smith_enqueue_scripts' ) ) :
+if( !function_exists( 'hji_schmitz_smith_enqueue_scripts' ) ) :
     function hji_schmitz_smith_enqueue_scripts() {
         wp_enqueue_script( 'hji_schmitz_smith_scripts', get_stylesheet_directory_uri() . '/assets/js/main.js', array( 'jquery' ), null, true );
     }

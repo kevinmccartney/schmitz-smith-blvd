@@ -4,7 +4,7 @@
  * Description: A page template for pages to have the Contact Us sidebar.
  */
 
-while ( have_posts() ) : the_post(); ?>
+while( have_posts() ) : the_post(); ?>
     
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         
@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
 
         <!-- adding the sidebar & changing the main content class -->
         
-        <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
+        <?php if( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
             
             <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
                 
@@ -39,26 +39,10 @@ while ( have_posts() ) : the_post(); ?>
                 <?php the_content(); ?>
         
             </section>
-
-        <!-- adding sidebar for mobile -->
-        
-        <?php if ( is_active_sidebar( 'meet-us-sidebar' ) ) : ?>
-            
-            <div class="custom-sidebar-wrapper hidden-md hidden-lg col-xs-12">
-                
-                <div id="meet-us-sidebar" class="sidebar widget-area" role="complementary">
-                    
-                    <?php dynamic_sidebar( 'meet-us-sidebar' ); ?>
-                
-                </div>
-            
-            </div>
-        
-        <?php endif; ?>
         
         <footer>
             
-            <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+            <?php wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
         
         </footer>
     

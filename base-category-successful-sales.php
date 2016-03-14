@@ -34,7 +34,7 @@
                     
                     <!-- adding the selling sidebar & changing the main content class -->
 
-                    <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
+                    <?php if( is_active_sidebar( 'selling-sidebar' ) ) : ?>
                     
                         <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
                             

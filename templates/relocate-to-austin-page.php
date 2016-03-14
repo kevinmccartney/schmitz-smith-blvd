@@ -4,7 +4,7 @@
  * Description: Page template for the Relocate to Austin Page.
  */
 
-while ( have_posts() ) : the_post(); ?>
+while( have_posts() ) : the_post(); ?>
     
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         
@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
 
         <!-- adding the explore austin sidebar sidebar & changing the main content class if the relocation page sidebar is also active -->
         
-        <?php if ( is_active_sidebar( 'explore-austin-sidebar' ) && is_active_sidebar( 'relocation-page' ) ) : ?>
+        <?php if( is_active_sidebar( 'explore-austin-sidebar' ) && is_active_sidebar( 'relocation-page' ) ) : ?>
            
             <div class="custom-sidebar-wrapper visible-lg col-lg-2">
                
@@ -62,51 +62,9 @@ while ( have_posts() ) : the_post(); ?>
 
         <!-- adding the relocation page sidebar sidebar & adding the explore austin sidebar If it's active & changing the sidebar class -->
         
-        <?php if ( is_active_sidebar( 'relocation-page' ) &&  is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
+        <?php if( is_active_sidebar( 'relocation-page' ) ) : ?>
             
-            <div class="col-xs-12">
-
-                <div class="custom-sidebar-wrapper col-xs-12 col-md-6 col-lg-3">
-                    
-                    <div id="relocation-page-sidebar" class="sidebar widget-area" role="complementary">
-                       
-                        <?php dynamic_sidebar( 'relocation-page' ); ?>
-                    
-                    </div>
-                
-                </div>
-                
-                <div class="custom-sidebar-wrapper col-xs-12 col-md-6 hidden-lg">
-                    
-                    <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
-                        
-                        <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
-                    
-                    </div>
-                
-                </div>
-
-            </div>
-
-        <!-- adding the explore austin page sidebar for mobile -->
-
-        <?php elseif( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
-
-            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 hidden-lg">
-                
-                <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
-                    
-                    <?php dynamic_sidebar( 'explore-austin-sidebar' ); ?>
-                
-                </div>
-            
-            </div>
-
-        <!-- adding the relocation page sidebar for mobile -->
-        
-        <?php elseif( is_active_sidebar( 'relocation-page' ) ) : ?>
-            
-            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 hidden-lg">
+            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                
                 <div id="relocation-page-sidebar" class="sidebar widget-area" role="complementary">
                    
@@ -120,7 +78,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <footer>
             
-            <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+            <?php wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
         
         </footer>
     

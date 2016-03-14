@@ -4,7 +4,7 @@
  * Description: A page template for pages to have the Selling sidebar.
  */
 
-while ( have_posts() ) : the_post(); ?>
+while( have_posts() ) : the_post(); ?>
     
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         
@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <!-- adding the sidebar & changing the main content class -->
 
-        <?php if ( is_active_sidebar( 'selling-sidebar' ) ) : ?>
+        <?php if( is_active_sidebar( 'selling-sidebar' ) ) : ?>
            
             <div class="custom-sidebar-wrapper visible-md visible-lg col-md-3">
                 
@@ -42,7 +42,7 @@ while ( have_posts() ) : the_post(); ?>
         
         <footer>
            
-            <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+            <?php wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
         
         </footer>
     

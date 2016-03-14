@@ -5,7 +5,7 @@
  */
 
 
-while ( have_posts() ) : the_post(); ?>
+while( have_posts() ) : the_post(); ?>
     
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         
@@ -17,7 +17,7 @@ while ( have_posts() ) : the_post(); ?>
 
         <!-- adding the buying sidebar sidebar & changing the main content class if the buyers page sidebar is also active -->
         
-        <?php if ( is_active_sidebar( 'buying-sidebar' ) && is_active_sidebar( 'buyers-page-sidebar' ) ) : ?>
+        <?php if( is_active_sidebar( 'buying-sidebar' ) && is_active_sidebar( 'buyers-page-sidebar' ) ) : ?>
             
             <div class="custom-sidebar-wrapper visible-lg col-lg-2">
                 
@@ -37,9 +37,19 @@ while ( have_posts() ) : the_post(); ?>
 
             <section class="page-content col-sm-12 col-lg-9">
 
-        <!-- changing the main content class if only the buying sidebar is active -->
+        <!-- adding the buying sidebar if active changing the main content class -->
         
         <?php elseif( is_active_sidebar( 'buying-sidebar' ) ) : ?>
+
+            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
+                
+                <div id="buying-sidebar" class="sidebar widget-area" role="complementary">
+                    
+                    <?php dynamic_sidebar( 'buying-sidebar' ); ?>
+                
+                </div>
+            
+            </div>
             
             <section class="page-content col-sm-12 col-lg-9">
         
@@ -55,11 +65,9 @@ while ( have_posts() ) : the_post(); ?>
 
         <!-- adding the buying page sidebar & buying sidebar for mobile -->
         
-        <?php if ( is_active_sidebar( 'buyers-page-sidebar' ) && is_active_sidebar( 'buying-sidebar') ) : ?>
-            
-            <div class="col-xs-12">
+        <?php if( is_active_sidebar( 'buyers-page-sidebar' ) ) : ?>
 
-                <div class="custom-sidebar-wrapper col-xs-12 col-md-6 col-lg-3">
+                <div class="custom-sidebar-wrapper visible-lg col-lg-3">
                     
                     <div id="buyers-page-sidebar" class="sidebar widget-area" role="complementary">
                         
@@ -68,50 +76,12 @@ while ( have_posts() ) : the_post(); ?>
                     </div>
                 
                 </div>
-                
-                <div class="custom-sidebar-wrapper hidden-lg col-md-6 col-xs-12">
-                    
-                    <div id="buying-sidebar" class="sidebar widget-area" role="complementary">
-                        
-                        <?php dynamic_sidebar( 'buying-sidebar' ); ?>
-                    
-                    </div>
-                
-                </div>
 
-            </div>
-
-        <!-- adding the buyers page sidebar if the buying sidebar isn't active  -->
-
-        <?php elseif( is_active_sidebar('buyers-page-sidebar') ) : ?>
-
-            <div class="custom-sidebar-wrapper col-xs-12 col-md-push-3 col-md-6 col-lg-3">
-                
-                <div id="buyers-page-sidebar" class="sidebar widget-area" role="complementary">
-                    
-                    <?php dynamic_sidebar( 'buyers-page-sidebar' ); ?>
-                
-                </div>
-            
-            </div>
-        
-        <?php elseif( is_active_sidebar('buying-sidebar') ) : ?>
-            
-            <div class="custom-sidebar-wrapper hidden-lg col-xs-12 col-md-push-3 col-md-6">
-                
-                <div id="buying-sidebar" class="sidebar widget-area" role="complementary">
-                    
-                    <?php dynamic_sidebar( 'buying-sidebar' ); ?>
-                
-                </div>
-            
-            </div>
-        
         <?php endif; ?>
         
         <footer>
             
-            <?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+            <?php wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
         
         </footer>
     

@@ -33,7 +33,7 @@
 
                     <!-- adding the blog sidebar & changing the main content class -->
                     
-                    <?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+                    <?php if( is_active_sidebar( 'blog-sidebar' ) ) : ?>
                         
                         <div class="custom-sidebar-wrapper visible-md visible-lg col-xs-12 col-md-3">
                             
