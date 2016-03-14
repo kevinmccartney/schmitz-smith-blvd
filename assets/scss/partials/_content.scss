@@ -43,8 +43,12 @@ h3.relo,
 }
 
 .btn-relo {
-    width: calc(50% - 2rem);
-    margin: 0 1rem;
+    width: 100%;
+    margin: 1rem auto;
+    @media(min-width: $screen-sm) {
+        width: calc(50% - 2rem);
+        margin: 0 1rem;
+    }
 }
 
 /* 
@@ -62,13 +66,16 @@ h3.relo,
 // the text
 a.pdf-download-button {
   font-variant: small-caps;
-  font-size: 2.5rem;
+  white-space: normal;
   letter-spacing: 2px;
   transition: ease 0.5s;
   &:hover,
   &:focus.
   &:active {
     padding: 2.5rem;    
+  }
+  @media(min-width: $screen-sm) {
+    font-size: 2.5rem;  
   }
 }
 

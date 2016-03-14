@@ -1,6 +1,6 @@
 // makes the rIDX quick search fields in the sidebar 100% width
 .custom-sidebar-wrapper .hji-fieldwrap input[type="text"] {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .custom-sidebar-wrapper .align-left {
@@ -8,26 +8,28 @@
 }
 
 .custom-sidebar-wrapper {
-  text-align: right;
-  .widget-title {
-    margin: 0;
-    h3 {
-      font-size: 2rem;
-      margin: 2rem auto;
+    .widget-title {
+        margin: 0;
+        h3 {
+            font-size: 2rem;
+            margin: 2rem auto;
+        }
     }
-  }
-  .nav > li > a {
-    color: $brand-second;
-    transition: ease 0.5s;
-    &:hover {
-      background-color: $brand-primary;
-      color: $white;
+    .nav {
+        text-align: right;
+        li > a {
+            color: $brand-second;
+            transition: ease 0.5s;
+            &:hover {
+                background-color: $brand-primary;
+                color: $white;
+            }
+        }
     }
-  }
 }
 
 .custom-sidebar-wrapper .nav .current-menu-item a {
-  background-color: $brand-primary;
+    background-color: $brand-primary;
 }
 
 h3.locale-cta.title {
