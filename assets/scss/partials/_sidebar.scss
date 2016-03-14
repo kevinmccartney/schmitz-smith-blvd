@@ -3,6 +3,9 @@
   width: 100% !important;
 }
 
+.custom-sidebar-wrapper .align-left {
+    text-align: left;
+}
 
 .custom-sidebar-wrapper {
   text-align: right;
@@ -23,47 +26,38 @@
   }
 }
 
-.custom-sidebar-wrapper.align-left {
-  text-align: left;
-}
-
 .custom-sidebar-wrapper .nav .current-menu-item a {
   background-color: $brand-primary;
 }
 
-h3.background-header {
-  padding: 1rem;
-  text-align: center;
-  font-size: 28px;
+h3.locale-cta.title {
+    padding: 1rem;
+    text-align: center;
+    font-size: 28px;
 }
 
-a.learn-more-link,
-a.seller-book {
-  width: 100%;
-  padding: 1rem;
-  margin-top: 1rem;
-  color: $white;
-  font-family: caviar dreams;
+.locale-cta.signup {
+    margin: 2rem auto;
 }
 
-.sidebar-cta-wrapper {
-  background-color: $brand-primary;
-  margin: 2rem auto;
-  padding: 2rem;
+.locale-cta.download .btn {
+    width: 100%;
+    white-space: normal;
+    font-family: 'caviar dreams', sans-serif;
 }
 
-h3.sidebar-cta {
-  font-size: 2.25rem;
-  display: inline;
-  color: $white;
-  padding-left: 0.5rem;
+.sidebar-cta.wrapper {
+    margin: 2rem auto;
+    background-color: #4B679B;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
 }
 
-a.sidebar-cta {
+.sidebar-cta.img-wrapper {
+    margin-bottom: 1rem;
+}
+
+p.sidebar-cta.copy {
     color: #fff;
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-    }
 }
