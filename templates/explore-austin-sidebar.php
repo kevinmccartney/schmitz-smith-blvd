@@ -18,7 +18,7 @@ while( have_posts() ) : the_post(); ?>
         
         <?php if( is_active_sidebar( 'explore-austin-sidebar' ) ) : ?>
             
-            <div class="custom-sidebar-wrapper visible-md visibe-lg col-md-3">
+            <div class="custom-sidebar-wrapper hidden-xs hidden-sm col-md-3">
                 
                 <div id="explore-austin-sidebar" class="sidebar widget-area" role="complementary">
                   

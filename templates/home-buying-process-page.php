@@ -31,12 +31,6 @@ while( have_posts() ) : the_post(); ?>
             
             <section class="page-content col-sm-12 col-lg-7">
 
-        <!-- changing the main content class if only the buying page sidebar is active -->
-
-        <?php elseif( is_active_sidebar( 'buying-page-sidebar' ) ) : ?>
-
-            <section class="page-content col-sm-12 col-lg-9">
-
         <!-- adding the buying sidebar if active changing the main content class -->
         
         <?php elseif( is_active_sidebar( 'buying-sidebar' ) ) : ?>
@@ -51,6 +45,12 @@ while( have_posts() ) : the_post(); ?>
             
             </div>
             
+            <section class="page-content col-sm-12 col-lg-9">
+
+        <!-- changing the main content class if only the buying page sidebar is active -->
+
+        <?php elseif( is_active_sidebar( 'buying-page-sidebar' ) ) : ?>
+
             <section class="page-content col-sm-12 col-lg-9">
         
         <?php else : ?>

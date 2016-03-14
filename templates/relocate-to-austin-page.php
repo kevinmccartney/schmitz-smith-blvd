@@ -46,7 +46,7 @@ while( have_posts() ) : the_post(); ?>
             
             <section class="page-content col-xs-12 col-lg-9">
 
-        <?php elseif( is_active_sidebar( 'relocation-page-sidebar' ) ) : ?>
+        <?php elseif( is_active_sidebar( 'relocation-page' ) ) : ?>
 
             <section class="page-content col-xs-12 col-lg-9">
         

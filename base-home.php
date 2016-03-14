@@ -35,7 +35,7 @@
                     
                     <?php if( is_active_sidebar( 'blog-sidebar' ) ) : ?>
                         
-                        <div class="custom-sidebar-wrapper visible-md visible-lg col-xs-12 col-md-3">
+                        <div class="custom-sidebar-wrapper hidden-xs hidden-sm hidden-md col-xs-12 col-md-3">
                             
                             <div id="blog-sidebar" class="sidebar widget-area" role="complementary">
                                 

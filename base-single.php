@@ -56,7 +56,7 @@
                                                         
                         <?php if( is_active_sidebar( 'blog-sidebar' ) && !in_category('successful-sales') ) : ?>
 
-                            <div class="custom-sidebar-wrapper col-xs-12 col-md-3">
+                            <div class="custom-sidebar-wrapper col-xs-12 hidden-xs hidden-sm col-md-3">
                 
                                 <div id="blog-sidebar" class="sidebar widget-area" role="complementary">
                                 

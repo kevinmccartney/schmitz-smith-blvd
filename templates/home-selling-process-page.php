@@ -29,6 +29,20 @@ while( have_posts() ) : the_post(); ?>
             </div>
             
             <section class="page-content col-xs-12 col-lg-7">
+
+        <?php elseif( is_active_sidebar( 'selling-sidebar' ) ) : ?>
+
+            <div class="custom-sidebar-wrapper visible-lg col-lg-3">
+                
+                <div id="selling-sidebar" class="sidebar widget-area" role="complementary">
+                    
+                    <?php dynamic_sidebar( 'selling-sidebar' ); ?>
+                
+                </div>
+            
+            </div>
+
+            <section class="page-content col-xs-12 col-lg-9">
         
         <?php elseif( is_active_sidebar( 'sellers-page-sidebar' ) ) : ?>
             
