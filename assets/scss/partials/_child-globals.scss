@@ -4,50 +4,50 @@ input[type="tel"],
 input[type="email"],
 textarea,
 .btn {
-    @include box-shadow( $boxshadow );
+    @include box-shadow($boxshadow);
 }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
+// changing the font face on all h tags, menus & the phone number in the header
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
-.navbar-nav > li > a, 
+.navbar-nav > li > a,
 .dropdown-menu > li > a,
-.header-phone, 
-div[id^="hji-theme-main-menu-widget"], 
-.header-phone-mobile, 
+.header-phone,
+div[id^="hji-theme-main-menu-widget"],
+.header-phone-mobile,
 .custom-sidebar-wrapper .nav > li > a {
     font-family: 'Caviar Dreams', Helvetica, Sans-Serif;
 }
 
+// giving the page titles a cool background
 h1.page-title {
-  background-color: $brand-primary;
-  padding: 2.5rem;
-  color: $white;
+    background-color: $brand-primary;
+    color: $white;
+    letter-spacing: .05em;
+    padding: 2.5rem;
 }
 
 // tab links
-.nav-tabs >  {
+.nav-tabs > {
     li > a {
-        margin-right: .75em;
         border-color: $nav-tabs-border-color;
         border-top: 3px solid $nav-tabs-border-color;
-
+        margin-right: .75em;
         &:hover {
             border-color: $nav-tabs-border-color;
-            border-top-color: change-color( $brand-primary, $brand-primary );
+            border-top-color: change-color($brand-primary, $brand-primary);
         }
     }
-
     // makes the active link have top highlight
     li.active > a,
     li.active > a:hover,
     li.active > a:focus {
         border-top: 3px solid $brand-primary;
     }
-
 }
 
 // tab content
@@ -58,58 +58,59 @@ h1.page-title {
 }
 
 .black-text {
-    color: #000;
+    color: $black;
 }
 
+// transitioning all links nicely
 a,
 .btn {
-    @include transition( all 0.35s ease-in-out );
+    @include transition(all 0.35s ease-in-out);
 }
 
 label {
-    margin-right:5px
+    margin-right: 5px;
 }
 
 // takes the underline away from the rIDX property title link
 a.listing-title:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 // aligns the grav form submit button to the center
 .gform_footer.top_label {
-  margin: 1em auto;
-  text-align: center;
+    margin: 1em auto;
+    text-align: center;
 }
 
-// takes away the borders from all grav form buttons 
+// takes away the borders from all grav form buttons
 .gform_wrapper .gform_button {
-    border: none;
+    border: 0;
 }
 
 // a custom helper class that creates a fifth column on $screen-md. must be
 // used with another .col-* class for proper inheritence.
 .col-md-fifth {
-  @media(min-width: 992px) {
-    width: 20%;
-  }
+    @media (min-width: 992px) {
+        width: 20%;
+    }
 }
 
 // centers the rIDX results grid and makes it 75% width on $screen-xs
 .idx-results {
-  @media (max-width: 768px) {
-      width: 75%;
-      margin: auto;
-  }
+    @media (max-width: 768px) {
+        width: 75%;
+        margin: auto;
+    }
 }
 
-// makes the content of the pages 95vw
+// the content of all pages
 section#primary {
-  width: 95%;
+    width: 95%;
 }
 
 // takes the underline away from the page headers
 .page-header {
-  border-bottom: 0px;
+    border-bottom: 0px;
 }
 
 // forces the save search button to have a grey background on IOS
@@ -117,6 +118,20 @@ input.save-search-btn.btn {
     background-color: #C0C0C0;
 }
 
+// if we don't do this, there are responsiveness issues
 .hjitb.quick-search-widget-wrapper {
     font-size: 14px;
+}
+
+// overriding button margins in quicksearch wrapper
+.quick-search-widget-wrapper.horizontal .hji-action-buttons-wrap {
+    @media (min-width: $screen-sm) {
+        margin-top: 0;
+    }
+}
+
+// makes the QS wrapper transparent & not have a border
+.hjitb.quick-search-widget-wrapper {
+  background-color: transparent;
+  border: 0px;
 }

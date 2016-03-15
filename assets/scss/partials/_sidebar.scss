@@ -3,10 +3,7 @@
     width: 100% !important;
 }
 
-.custom-sidebar-wrapper .align-left {
-    text-align: left;
-}
-
+// setting more widget title styles
 .custom-sidebar-wrapper {
     .widget-title {
         margin: 0;
@@ -16,9 +13,9 @@
         }
     }
     .nav {
-        text-align: right;
         li > a {
             color: $brand-second;
+            -webkit-transition: ease 0.5s;
             transition: ease 0.5s;
             &:hover {
                 background-color: $brand-primary;
@@ -28,14 +25,25 @@
     }
 }
 
+// aligning the text to the right for the menus on the left side of the page
+.custom-sidebar-wrapper .align-right {
+    .widget-title h3 {
+        text-align: right;
+    }
+    .nav {
+        text-align: right;
+    }
+}
+
 .custom-sidebar-wrapper .nav .current-menu-item a {
     background-color: $brand-primary;
 }
 
+// the following three styles are for the Locale Austin CTAs
 h3.locale-cta.title {
+    font-size: 28px;
     padding: 1rem;
     text-align: center;
-    font-size: 28px;
 }
 
 .locale-cta.signup {
@@ -43,17 +51,18 @@ h3.locale-cta.title {
 }
 
 .locale-cta.download .btn {
+    font-family: 'Caviar Dreams', sans-serif;
     width: 100%;
     white-space: normal;
-    font-family: 'caviar dreams', sans-serif;
 }
 
+// the "CTAs" in the sidebar below the Locale Austin CTAs
 .sidebar-cta.wrapper {
-    margin: 2rem auto;
     background-color: #4B679B;
+    border-radius: 4px;
+    margin: 2rem auto;
     padding: 1.5rem;
     text-align: center;
-    border-radius: 4px;
 }
 
 .sidebar-cta.img-wrapper {
@@ -61,5 +70,5 @@ h3.locale-cta.title {
 }
 
 p.sidebar-cta.copy {
-    color: #fff;
+    color: $white;
 }

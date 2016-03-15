@@ -1,82 +1,60 @@
-h1.page-title {
-    letter-spacing: .05em;
-}
-
-.entry-content .read-more-link {
-  margin: 1rem 0;
-
-  a {
-      text-decoration: none;
-  }
-}
-article.post {
-    border-top: rgba($brand-second, 0.75);
-    padding-top: 2.5rem;
-
-    &:first-child {
-        border-top:none;
-    }
-}
-
-.custom-video-grid-area-title {
-    color: $white;
-}
-
-// a helper class that works in conjunction with the responsive bootstrap
-// class as a wrapper
-.youtube-video-wrapper {
-  @media(min-width: 992px) {
-    width: 65%;
-    margin: auto;
-  }
-}
-
 // adds a 2rem margin to all content sections not on the homepage
 body:not(.home) #content {
     margin: 2rem 0px;
     padding: 2rem;
 }
 
-h3.relo, 
-.relo-links-wrapper {
-    text-align: center;
-}
-
-.btn-relo {
-    width: 100%;
-    margin: 1rem auto;
-    @media(min-width: $screen-sm) {
-        width: calc(50% - 2rem);
-        margin: 0 1rem;
+// the "read more" button on the archive
+.entry-content .read-more-link {
+    margin: 1rem 0;
+    a {
+        text-decoration: none;
     }
 }
 
-/* 
- * BEGIN $pdf-download-button 
- * these styles govern the button on the $page
- */
-
-// the container
-.pdf-download-container {
-  width: 100%;
-  margin: 3rem 0rem;
-  text-align: center;
+// the titles on the "Neighborhood Videos" page
+.custom-video-grid-area-title {
+    background-color: $brand-primary-light-20;
+    color: $white;
+    padding: 1rem 4rem;
+    font-size: 4.5rem;
+    font-weight: bolder;
 }
 
-// the text
+// the "pods" on the "Neighborhood Videos" page
+.custom-video-grid-item {
+    text-align: center;
+}
+
+// the title on the "Relocate To Austin" page
+h3.relo {
+    text-align: center;
+}
+
+// the buttons on the "Relocate To Austin" page
+.btn-relo {
+    margin: 1rem auto;
+    width: 100%;
+    @media (min-width: $screen-sm) {
+        margin: 0 1rem;
+        width: calc(50% - 2rem);
+    }
+}
+
+// the container for the download button on the "Buyers Resources" page
+.pdf-download-container {
+    margin: 3rem 0rem;
+    text-align: center;
+}
+
+// the download button on the "Buyers Resources" page
 a.pdf-download-button {
-  font-variant: small-caps;
-  white-space: normal;
-  letter-spacing: 2px;
-  transition: ease 0.5s;
-  &:hover,
-  &:focus.
-  &:active {
-    padding: 2.5rem;    
-  }
-  @media(min-width: $screen-sm) {
-    font-size: 2.5rem;  
-  }
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    white-space: normal;
+    @media (min-width: $screen-sm) {
+        font-size: 2.5rem;
+    }
 }
 
 // hides the alphabet search under the main search bar on the 
@@ -85,27 +63,9 @@ ul#agent-index {
     display: none;
 }
 
-.custom-video-grid-area-title {
-    font-weight: bolder;
-    font-size: 4.5rem;
-    background-color: $brand-primary-light-20;
-    padding: 1rem 4rem;
-}
-
-.custom-video-grid-item {
-    text-align: center;
-}
-
-.custom-homepage-cta-pods {
-    text-align: center;
-    @media(max-width: $screen-md) {
-        margin: 1rem auto;
-    }
-}
-
 // follow blog page
 .follow-blog-form-wrapper {
-    @media(min-width: $screen-sm) {
+    @media (min-width: $screen-sm) {
         width: 75%;
         margin: auto;
     }

@@ -1,0 +1,15 @@
+// So in Bootstrap 4, there will be a $screen-xs AND $screen-xxs, so $screen-xs will
+// take over the functionality of this mixin
+// https://github.com/twbs/bootstrap/issues/14504
+// Until then, I made this.
+@mixin mobile_landscape {
+    $mobile_landscape_min: 480px;
+    $mobile_landscape_max: 767px;
+    @media (min-width: $mobile_landscape_min) and (max-width: $mobile_landscape_max) {
+        @content;
+    }
+}
+
+@mixin no_borders {
+    border: 0;
+}

@@ -1,35 +1,35 @@
-// makes the QS wrapper transparent & not have a border
-.hjitb.quick-search-widget-wrapper {
-  background-color: transparent;
-  border: 0px;
-}
-
 // centers the quick search widget title & resets the margins
 .home .widget_sm_quicksearch_widget .widget-title {
-  margin: 2rem auto;
-  h3 {
-    text-align: center;
-    margin: 0px;
-  }
+    margin: 2rem auto;
+    h3 {
+        margin: 0px;
+        text-align: center;
+    }
 }
 
 // pins the slideshow to the bottom of the header
 .blvd-slideshow {
-  top: initial;
-  box-shadow: $brand-second 0px 5px 10px;
+    box-shadow: $brand-second 0px 5px 10px;
+    top: initial;
 }
 
-// pushes all the home widgets down 
+// pushes all the home widgets down
 .blvd-home-widgets {
-  margin-top: 50rem;
+    margin-top: 50rem;
 }
 
+// the CTAs on under the quicksearch widget
 .custom-homepage-cta-pods {
     opacity: 0.8;
+    text-align: center;
+    -webkit-transition: ease 0.5s;
     transition: ease 0.5s;
     &:hover,
     &:active,
     &:focus {
         opacity: 1;
+    }
+    @media (max-width: $screen-md) {
+        margin: 1rem auto;
     }
 }

@@ -1,61 +1,58 @@
-// rIDX styles
+// makes the rIDX listings grid 3/4 width centered on the screen on $screen-xs
+.idx-results {
+    @include mobile_landscape {
+        margin: auto;
+        width: 75%;
+    }
+}
 
 // Single Listing View
 .ridx-single {
-
     // fixes button shadows
     .tools-panel {
-
         .btn {
             @include box-shadow(none);
         }
-
         @media (min-width: $screen-md) {
-            @include box-shadow( $boxshadow );
+            @include box-shadow($boxshadow);
         }
     }
-
+    // the listing details to the right of the listing photo
     .idx-secondary-item {
         padding: 0 .33em;
-
         &:nth-child(odd) {
-            background-color: change-color( $body-background-color, $body-background-color, 4% );
+            background-color: change-color($body-background-color, $body-background-color, 4%);
         }
     }
-
     .photo-wrap {
         position: relative;
-
+        // the open house button
         .vt-wrap {
+            border-radius: $border-radius-base;
+            background-color: rgba($brand-second, 0.8);
+            left: 1em;
+            padding: .5em 1em;
             position: absolute;
             top: 1em;
-            left: 1em;
-            background-color: rgba($brand-second, .8);
-
-            padding: .5em 1em;
-            border-radius: $border-radius-base;
-
             a {
-                color: set-text-color-from-background( rgba($brand-second, .8) );
+                color: set-text-color-from-background(rgba($brand-second, 0.8));
                 &:hover {
                     color: $brand-primary;
                     text-decoration: none;
                 }
             }
-
             &:hover {
                 background-color: $brand-second;
             }
         }
     }
-
     .slider-wrapper {
         margin-top: .75em;
-
+        // setting the font family for the slider title
         &:before {
+            content: "Additional Photos";
             font-family: 'Caviar Dreams', Helvetica, Sans-Serif;
             font-size: 2rem;
-            content: "Additional Photos";
         }
     }
 }

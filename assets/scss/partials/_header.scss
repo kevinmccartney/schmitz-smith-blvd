@@ -1,43 +1,47 @@
 .banner,
 .banner .top-header {
-    border: none;
+    @include no_borders;
 }
 
 // makes the users sign in bar 100%. always.
 .user-signup-header {
-  width: 100%;
+    width: 100%;
 }
 
 // makes the header widget 95vw above 1200px
 .header-widgets.container {
-  @media(min-width: $screen-lg) {
-    width: 95vw;
-  }
+    @media (min-width: $screen-lg) {
+        width: 95vw;
+    }
 }
 
 // styling for the mobile hamburger menu toggle
 .navbar-default .navbar-toggle {
-    border: 0;
+    @include no_borders;
     background-color: $brand-primary;
     .icon-bar {
         background-color: $white;
     }
-    &:hover, 
+    &:hover,
     &:focus,
     &:active {
-        border: 0;
         background-color: $brand-primary-light-10;
-        .icon-bar {
-            background-color: $white;
-        }
+        border: 0;
+    }
+}
+
+// makes sure that the logo doesn't overlap the mobile menu toggle
+img#site-logo {
+    @media (max-width: $screen-lg) {
+        width: 75%;
     }
 }
 
 //styling for the phone number in the header
 .header-phone {
-  font-size: 2.65rem;
-  position: absolute;
-  right: 50px;
+    font-size: 2.65rem;
+    position: absolute;
+    right: 50px;
 }
 
 // styling for the not mobile contact & social media buttons
@@ -50,29 +54,25 @@
 
 // resets the logo margins
 .banner .header-widgets .blvd-logo {
-    margin: 0px;
+    margin: 0;
 }
 
-//resets the bottom margin on the blvd menu
 .banner .header-widgets .blvd-responsive-menu {
-  margin-top: 0;
-  margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+// this block sets styles the dropdown items in the main menu
+.blvd-responsive-menu .dropdown-menu > li > a {
+    &:hover,
+    &:active,
+    &:focus {
+        color: $white;
+        background-color: $brand-primary;
+    }
 }
 
 // styling for the mobile phone number
 .header-phone-mobile {
-  font-size: 2.25rem;
-}
-
-// makes sure that the logo doesn't overlap the mobile menu toggle
-img#site-logo {
-  @media(max-width: $screen-lg) {
-    width: 75%;
-  }
-}
-
-.dropdown-menu > li > a:hover, 
-.dropdown-menu > li > a:focus {
-    background-color: $brand-primary;
-    color: #fff;
+    font-size: 2.25rem;
 }
