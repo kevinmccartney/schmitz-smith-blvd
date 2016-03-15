@@ -13,6 +13,7 @@
         }
     }
     .nav {
+        text-align: initial;
         li > a {
             color: $brand-second;
             -webkit-transition: ease 0.5s;
@@ -28,6 +29,7 @@
 // aligning the text to the right for the menus on the left side of the page
 .custom-sidebar-wrapper .align-right {
     .widget-title h3 {
+        padding-right: 15px;
         text-align: right;
     }
     .nav {
@@ -63,6 +65,18 @@ h3.locale-cta.title {
     margin: 2rem auto;
     padding: 1.5rem;
     text-align: center;
+}
+
+.sidebar-cta.title {
+    color: $white;
+}
+
+a.sidebar-cta.link {
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 .sidebar-cta.img-wrapper {
